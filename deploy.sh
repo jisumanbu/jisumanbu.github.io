@@ -3,5 +3,5 @@ git add .
 DATE=`date +%Y-%m-%d.%T`
 git commit -m "$DATE"
 git push jisumanbu.io hexo
-hexo g
-hexo d
+#hexo g
+#hexo d
