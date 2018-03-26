@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/jisumanbu.github.io.copy.iml" filepath="$PROJECT_DIR$/jisumanbu.github.io.copy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hexoWorkspace.iml" filepath="$PROJECT_DIR$/hexoWorkspace.iml" />
     </modules>
   </component>
 </project>
