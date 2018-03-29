@@ -326,6 +326,210 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/29/RocketMq实战/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jisumanbu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/422.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="极速漫步">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/29/RocketMq实战/" itemprop="url">RocketMq实战</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-29T22:59:15+08:00">2018-03-29</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MQ/" itemprop="url" rel="index"><span itemprop="name">MQ</span></a></span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MQ/RocketMQ/" itemprop="url" rel="index"><span itemprop="name">RocketMQ</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">596</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">0:01</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <pre><code>将RocketMQ的producer和listner封装成sender和consumer，力求简单实用。
+</code></pre><h2 id="发送消息"><a href="#发送消息" class="headerlink" title="发送消息"></a>发送消息</h2><pre><code>封装类为：MqMessageSender，支持以下多种发送方式及异常处理
+</code></pre><h3 id="1-同步和异步发送消息"><a href="#1-同步和异步发送消息" class="headerlink" title="1. 同步和异步发送消息"></a>1. 同步和异步发送消息</h3><h3 id="2-发送有序消息"><a href="#2-发送有序消息" class="headerlink" title="2. 发送有序消息"></a>2. 发送有序消息</h3><h3 id="3-延迟发送消息"><a href="#3-延迟发送消息" class="headerlink" title="3. 延迟发送消息"></a>3. 延迟发送消息</h3><h3 id="4-异常处理"><a href="#4-异常处理" class="headerlink" title="4. 异常处理"></a>4. 异常处理</h3><blockquote>
+<ul>
+<li>失败重试</li>
+</ul>
+</blockquote>
+<h2 id="接收并消费消息"><a href="#接收并消费消息" class="headerlink" title="接收并消费消息"></a>接收并消费消息</h2><blockquote>
+<p>分为ConcurrentlyConsumer和OrderlyConsumer。</p>
+<blockquote>
+<ul>
+<li>有序消息 -&gt; 继承OrderlyConsumer</li>
+<li>非有序消息 -&gt; 可认为支持多线程, 继承ConcurrentlyConsumer</li>
+</ul>
+</blockquote>
+</blockquote>
+<h3 id="自动过滤重复消息，避免重复消费问题"><a href="#自动过滤重复消息，避免重复消费问题" class="headerlink" title="自动过滤重复消息，避免重复消费问题"></a>自动过滤重复消息，避免重复消费问题</h3><blockquote>
+<p>具体实现：AbstractConsumer.isAlreadyConsumed(…)方法。</p>
+<blockquote>
+<p>利用redisson的RSetCache类的add特性来判断消息是否已经消费过了 </p>
+<blockquote>
+<p>true if value has been added. false if value already been in collection.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">isAlreadyConsumed = !FedisClient.getClient().getSetCache(hashKeyOfRedis).add(messageKey, <span class="number">1L</span>, TimeUnit.DAYS);</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>注意：FedisClient为未实现单例，用户得自行修复以上代码。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/17/以企业的方式经营家庭/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1999,7 +2203,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
