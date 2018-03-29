@@ -16,7 +16,7 @@ tags:
  2. 发送有序消息
  3. 延迟发送消息
  4. 异常处理
-    > * 失败重试
+    > 失败重试
 
 ## 接收并消费消息
  > 分为ConcurrentlyConsumer和OrderlyConsumer。
