@@ -12,6 +12,7 @@ tags:
 
 ## 发送消息
     封装类为：MqMessageSender，支持以下多种发送方式及异常处理
+    源码：https://github.com/jisumanbu/RocketMqInAction.git
  * 同步和异步发送消息
  * 发送有序消息
  * 延迟发送消息
