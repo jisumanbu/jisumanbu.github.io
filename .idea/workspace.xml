@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d6ec393-0046-4be9-8807-d7e723204dd2" name="Default" comment="" />
+    <list default="true" id="7d6ec393-0046-4be9-8807-d7e723204dd2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/next/_config.yml" afterPath="$PROJECT_DIR$/themes/next/_config.yml" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,11 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/next/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="55" column="21" lean-forward="false" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.deploy_git/categories/BetterLife/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="258">
-              <caret line="134" column="43" lean-forward="false" selection-start-line="134" selection-start-column="43" selection-end-line="134" selection-end-column="43" />
+              <caret line="134" column="43" lean-forward="false" selection-start-line="134" selection-start-column="39" selection-end-line="134" selection-end-column="43" />
               <folding>
                 <marker date="1522381888000" expanded="true" signature="2705:2755" ph="..." />
                 <marker date="1522381888000" expanded="true" signature="2723:2745" ph="{&quot;sidebar&quot;: &quot;&quot;...}" />
@@ -122,6 +134,8 @@
       <find>path</find>
       <find>url</find>
       <find>{% block title %} {{ config.title }} {% endblock %}</find>
+      <find>f</find>
+      <find>知识体系</find>
       <find>keywords</find>
     </findStrings>
   </component>
@@ -139,6 +153,7 @@
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/themes/next/layout/index.swig" />
         <option value="$PROJECT_DIR$/.deploy_git/categories/BetterLife/index.html" />
+        <option value="$PROJECT_DIR$/themes/next/_config.yml" />
       </list>
     </option>
   </component>
@@ -358,12 +373,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522381213738</updated>
-      <workItem from="1522381216003" duration="568000" />
+      <workItem from="1522381216003" duration="644000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="568000" />
+    <option name="totallyTimeSpent" value="644000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -435,18 +450,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/next/layout/index.swig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.deploy_git/categories/BetterLife/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
-          <caret line="134" column="43" lean-forward="false" selection-start-line="134" selection-start-column="43" selection-end-line="134" selection-end-column="43" />
+          <caret line="134" column="43" lean-forward="false" selection-start-line="134" selection-start-column="39" selection-end-line="134" selection-end-column="43" />
           <folding>
             <marker date="1522381888000" expanded="true" signature="2705:2755" ph="..." />
             <marker date="1522381888000" expanded="true" signature="2723:2745" ph="{&quot;sidebar&quot;: &quot;&quot;...}" />
@@ -520,6 +527,22 @@
             <marker date="1522381888000" expanded="true" signature="11539:11660" ph="..." />
             <marker date="1522381888000" expanded="true" signature="11619:11651" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/layout/index.swig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="55" column="21" lean-forward="false" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
