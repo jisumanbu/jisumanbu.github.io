@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 hexo g
-hexo d
 
 git add .
 #DATE=`date +%Y-%m-%d.%T`
-git commit -m "SEO优化 - 添加蜘蛛协议robots.txt"
+git commit -m "先push到git，再deploy个人服务器"
 git push --set-upstream jisumanbu.io hexo
+
+hexo d
+
