@@ -5,4 +5,4 @@ hexo d
 git add .
 #DATE=`date +%Y-%m-%d.%T`
 git commit -m "SEO优化 - 添加蜘蛛协议robots.txt"
-git push
+git push --set-upstream jisumanbu.io hexo
