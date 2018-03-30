@@ -765,6 +765,207 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.bbetterman.com/2018/03/15/HTTP_HTTPS_Token/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jisumanbu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/422.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="极速漫步">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/15/HTTP_HTTPS_Token/" itemprop="url">HTTP、HTTPS、TOKEN的比较 以及 如何选择</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-15T00:00:00+08:00">2018-03-15</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a></span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web/Security/" itemprop="url" rel="index"><span itemprop="name">Security</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">2.5k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">0:03</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="HTTP与HTTPS"><a href="#HTTP与HTTPS" class="headerlink" title="HTTP与HTTPS"></a>HTTP与HTTPS</h3><ul>
+<li>HTTP的缺点 及 解决方案<ul>
+<li>通信使用明文(不加密)，内容可能被窃听<blockquote>
+<p>加密</p>
+</blockquote>
+</li>
+<li>不验证通信方的身份，因此有可能遭遇伪装（假的server或client）<blockquote>
+<p>证书 （支持双向验证，但通常只验证服务端.）<br>SSL客户端的身份验证是可选的，由SSL服务器决定是否验证SSL客户端的身份</p>
+</blockquote>
+</li>
+<li>无法证明报文的完整性，所以有可能已遭篡改<blockquote>
+<p>基于散列值校验（MD5 / SHA-1）等等的完整性校验方案   </p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>HTTPS可以完美解决以上问题<blockquote>
+<ul>
+<li><strong>HTTP + 加密 + 认证 + 完整性保护 = HTTPS</strong>      </li>
+<li>请求包可以被截获，但无法解密读取</li>
+<li>对于HTTPS不做赘述，下面仅附图一张<br><img src="/images/图解HTTPS.png" alt="图解HTTPS">
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/03/15/HTTP_HTTPS_Token/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.bbetterman.com/2018/03/15/HashMap的工作原理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1088,207 +1289,6 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/15/redisInAction/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.bbetterman.com/2018/03/15/HTTP_HTTPS_Token/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jisumanbu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/422.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="极速漫步">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/15/HTTP_HTTPS_Token/" itemprop="url">HTTP、HTTPS、TOKEN的比较 以及 如何选择</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-15T00:00:00+08:00">2018-03-15</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a></span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web/Security/" itemprop="url" rel="index"><span itemprop="name">Security</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">2.5k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">0:03</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="HTTP与HTTPS"><a href="#HTTP与HTTPS" class="headerlink" title="HTTP与HTTPS"></a>HTTP与HTTPS</h3><ul>
-<li>HTTP的缺点 及 解决方案<ul>
-<li>通信使用明文(不加密)，内容可能被窃听<blockquote>
-<p>加密</p>
-</blockquote>
-</li>
-<li>不验证通信方的身份，因此有可能遭遇伪装（假的server或client）<blockquote>
-<p>证书 （支持双向验证，但通常只验证服务端.）<br>SSL客户端的身份验证是可选的，由SSL服务器决定是否验证SSL客户端的身份</p>
-</blockquote>
-</li>
-<li>无法证明报文的完整性，所以有可能已遭篡改<blockquote>
-<p>基于散列值校验（MD5 / SHA-1）等等的完整性校验方案   </p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li>HTTPS可以完美解决以上问题<blockquote>
-<ul>
-<li><strong>HTTP + 加密 + 认证 + 完整性保护 = HTTPS</strong>      </li>
-<li>请求包可以被截获，但无法解密读取</li>
-<li>对于HTTPS不做赘述，下面仅附图一张<br><img src="/images/图解HTTPS.png" alt="图解HTTPS">
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/15/HTTP_HTTPS_Token/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
