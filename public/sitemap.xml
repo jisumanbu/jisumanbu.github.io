@@ -2,14 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.bbetterman.com/2018/03/31/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/</loc>
+    <loc>http://www.bbetterman.com/2018/03/31/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E6%80%BB%E8%A7%88/</loc>
     
-    <lastmod>2018-03-31T03:06:55.000Z</lastmod>
+    <lastmod>2018-03-31T03:42:33.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.bbetterman.com/2018/03/17/%E4%BB%A5%E4%BC%81%E4%B8%9A%E7%9A%84%E6%96%B9%E5%BC%8F%E7%BB%8F%E8%90%A5%E5%AE%B6%E5%BA%AD/</loc>
+    <loc>http://www.bbetterman.com/2018/03/15/redisInAction/</loc>
+    
+    <lastmod>2018-03-30T03:12:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.bbetterman.com/2018/03/14/RocketMQ%E4%B8%80%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</loc>
     
     <lastmod>2018-03-30T03:12:42.000Z</lastmod>
     
@@ -30,21 +37,14 @@
   </url>
   
   <url>
+    <loc>http://www.bbetterman.com/2018/03/17/%E4%BB%A5%E4%BC%81%E4%B8%9A%E7%9A%84%E6%96%B9%E5%BC%8F%E7%BB%8F%E8%90%A5%E5%AE%B6%E5%BA%AD/</loc>
+    
+    <lastmod>2018-03-30T03:12:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.bbetterman.com/2018/03/15/HashMap%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/</loc>
-    
-    <lastmod>2018-03-30T03:12:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.bbetterman.com/2018/03/15/redisInAction/</loc>
-    
-    <lastmod>2018-03-30T03:12:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.bbetterman.com/2018/03/14/RocketMQ%E4%B8%80%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</loc>
     
     <lastmod>2018-03-30T03:12:42.000Z</lastmod>
     
