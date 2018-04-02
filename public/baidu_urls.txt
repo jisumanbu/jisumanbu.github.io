@@ -2,8 +2,8 @@ http://www.bbetterman.com/2018/03/31/知识体系总览/
 http://www.bbetterman.com/2018/03/29/RocketMq实战/
 http://www.bbetterman.com/2018/03/17/以企业的方式经营家庭/
 http://www.bbetterman.com/2018/03/15/HTTP_HTTPS_Token/
-http://www.bbetterman.com/2018/03/15/HashMap的工作原理/
 http://www.bbetterman.com/2018/03/15/redisInAction/
+http://www.bbetterman.com/2018/03/15/HashMap的工作原理/
 http://www.bbetterman.com/2018/03/14/RocketMQ二安装与简单使用/
 http://www.bbetterman.com/2018/03/14/RocketMQ一基本概念/
 http://www.bbetterman.com/2018/03/13/为什么需要消息中间件以及消息中间件的使用场景/

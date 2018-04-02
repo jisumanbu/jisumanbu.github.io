@@ -24,12 +24,37 @@
 
     
   <url>
-    <loc>http://www.bbetterman.com/2018/03/14/RocketMQ%E4%BA%8C%E5%AE%89%E8%A3%85%E4%B8%8E%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</loc>
+    <loc>http://www.bbetterman.com/2018/03/15/HTTP_HTTPS_Token/</loc>
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
     <data>
         <display>
-        <title>RocketMQ二安装与简单实用</title>
-        <pubTime>2018-03-13T18:21:26.000Z</pubTime>
+        <title>HTTP、HTTPS、TOKEN的比较 以及 如何选择</title>
+        <pubTime>2018-03-14T16:00:00.000Z</pubTime>
+        
+        <tag>HTTPS</tag>
+         
+        <tag>JWT</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="http://www.bbetterman.com/categories/Web/"/>
+          
+             
+              <breadCrumb title="Security" url="http://www.bbetterman.com/categories/Web/Security/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.bbetterman.com/2018/03/29/RocketMq%E5%AE%9E%E6%88%98/</loc>
+    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>RocketMq实战</title>
+        <pubTime>2018-03-29T14:59:15.000Z</pubTime>
         
         <tag>MQ</tag>
          
@@ -49,24 +74,19 @@
 
     
   <url>
-    <loc>http://www.bbetterman.com/2018/03/15/HTTP_HTTPS_Token/</loc>
+    <loc>http://www.bbetterman.com/2018/03/15/redisInAction/</loc>
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
     <data>
         <display>
-        <title>HTTP、HTTPS、TOKEN的比较 以及 如何选择</title>
+        <title>Redis实战（Redis IN ACTION）</title>
         <pubTime>2018-03-14T16:00:00.000Z</pubTime>
         
-        <tag>HTTPS</tag>
-         
-        <tag>JWT</tag>
+        <tag>Redis</tag>
          
          
            
              
-              <breadCrumb title="Web" url="http://www.bbetterman.com/categories/Web/"/>
-          
-             
-              <breadCrumb title="Security" url="http://www.bbetterman.com/categories/Web/Security/"/>
+              <breadCrumb title="readNote" url="http://www.bbetterman.com/categories/readNote/"/>
           
         </display>
     </data>
@@ -96,32 +116,12 @@
 
     
   <url>
-    <loc>http://www.bbetterman.com/2018/03/15/redisInAction/</loc>
+    <loc>http://www.bbetterman.com/2018/03/14/RocketMQ%E4%BA%8C%E5%AE%89%E8%A3%85%E4%B8%8E%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
     <data>
         <display>
-        <title>Redis实战（Redis IN ACTION）</title>
-        <pubTime>2018-03-14T16:00:00.000Z</pubTime>
-        
-        <tag>Redis</tag>
-         
-         
-           
-             
-              <breadCrumb title="readNote" url="http://www.bbetterman.com/categories/readNote/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.bbetterman.com/2018/03/29/RocketMq%E5%AE%9E%E6%88%98/</loc>
-    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>RocketMq实战</title>
-        <pubTime>2018-03-29T14:59:15.000Z</pubTime>
+        <title>RocketMQ二安装与简单实用</title>
+        <pubTime>2018-03-13T18:21:26.000Z</pubTime>
         
         <tag>MQ</tag>
          
