@@ -2,42 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.bbetterman.com/operate-family-like-a-company.html</loc>
-    
-    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.bbetterman.com/knowledge-hierarchy.html</loc>
-    
-    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.bbetterman.com/how-does-a-hashmap-work-in-java.html</loc>
-    
-    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.bbetterman.com/mq-why-and-where-to-use-it.html</loc>
-    
-    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.bbetterman.com/rocketMQ-1-concepts.html</loc>
-    
-    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.bbetterman.com/redisInAction.html</loc>
+    <loc>http://www.bbetterman.com/rocketMQ-2-installation-and-simple-usages.html</loc>
     
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
     
@@ -51,14 +16,49 @@
   </url>
   
   <url>
-    <loc>http://www.bbetterman.com/rocketMq-in-action.html</loc>
+    <loc>http://www.bbetterman.com/knowledge-hierarchy.html</loc>
     
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.bbetterman.com/rocketMQ-2-installation-and-simple-usages.html</loc>
+    <loc>http://www.bbetterman.com/mq-why-and-where-to-use-it.html</loc>
+    
+    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.bbetterman.com/operate-family-like-a-company.html</loc>
+    
+    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.bbetterman.com/redisInAction.html</loc>
+    
+    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.bbetterman.com/how-does-a-hashmap-work-in-java.html</loc>
+    
+    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.bbetterman.com/rocketMQ-1-concepts.html</loc>
+    
+    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.bbetterman.com/rocketMq-in-action.html</loc>
     
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
     
