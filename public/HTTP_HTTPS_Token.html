@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.6" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.6">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.6" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.0.6',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  
+
+<meta name="description" content="HTTP与HTTPS HTTP的缺点 及 解决方案 通信使用明文(不加密)，内容可能被窃听 加密   不验证通信方的身份，因此有可能遭遇伪装（假的server或client） 证书 （支持双向验证，但通常只验证服务端.）SSL客户端的身份验证是可选的，由SSL服务器决定是否验证SSL客户端的身份   无法证明报文的完整性，所以有可能已遭篡改 基于散列值校验（MD5 / SHA-1）等等的完整性校验">
+<meta name="keywords" content="HTTPS,JWT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP、HTTPS、TOKEN的比较 以及 如何选择">
+<meta property="og:url" content="http://www.bbetterman.com/HTTP_HTTPS_Token.html">
+<meta property="og:site_name" content="极速漫步">
+<meta property="og:description" content="HTTP与HTTPS HTTP的缺点 及 解决方案 通信使用明文(不加密)，内容可能被窃听 加密   不验证通信方的身份，因此有可能遭遇伪装（假的server或client） 证书 （支持双向验证，但通常只验证服务端.）SSL客户端的身份验证是可选的，由SSL服务器决定是否验证SSL客户端的身份   无法证明报文的完整性，所以有可能已遭篡改 基于散列值校验（MD5 / SHA-1）等等的完整性校验">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.bbetterman.com/images/图解HTTPS.png">
+<meta property="og:updated_time" content="2018-04-01T08:30:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTTP、HTTPS、TOKEN的比较 以及 如何选择">
+<meta name="twitter:description" content="HTTP与HTTPS HTTP的缺点 及 解决方案 通信使用明文(不加密)，内容可能被窃听 加密   不验证通信方的身份，因此有可能遭遇伪装（假的server或client） 证书 （支持双向验证，但通常只验证服务端.）SSL客户端的身份验证是可选的，由SSL服务器决定是否验证SSL客户端的身份   无法证明报文的完整性，所以有可能已遭篡改 基于散列值校验（MD5 / SHA-1）等等的完整性校验">
+<meta name="twitter:image" content="http://www.bbetterman.com/images/图解HTTPS.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://www.bbetterman.com/HTTP_HTTPS_Token.html"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>HTTP、HTTPS、TOKEN的比较 以及 如何选择 | 极速漫步</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> 
+
+<div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">极速漫步</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="accessibility.nav_toggle">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+          
+  <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+</li>
+
+      
+
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.bbetterman.com/HTTP_HTTPS_Token.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jisumanbu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/422.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="极速漫步">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">HTTP、HTTPS、TOKEN的比较 以及 如何选择</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-15T00:00:00+08:00">2018-03-15</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a></span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web/Security/" itemprop="url" rel="index"><span itemprop="name">Security</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">2.5k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">0:03</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="HTTP与HTTPS"><a href="#HTTP与HTTPS" class="headerlink" title="HTTP与HTTPS"></a>HTTP与HTTPS</h3><ul>
+<li>HTTP的缺点 及 解决方案<ul>
+<li>通信使用明文(不加密)，内容可能被窃听<blockquote>
+<p>加密</p>
+</blockquote>
+</li>
+<li>不验证通信方的身份，因此有可能遭遇伪装（假的server或client）<blockquote>
+<p>证书 （支持双向验证，但通常只验证服务端.）<br>SSL客户端的身份验证是可选的，由SSL服务器决定是否验证SSL客户端的身份</p>
+</blockquote>
+</li>
+<li>无法证明报文的完整性，所以有可能已遭篡改<blockquote>
+<p>基于散列值校验（MD5 / SHA-1）等等的完整性校验方案   </p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>HTTPS可以完美解决以上问题<blockquote>
+<ul>
+<li><strong>HTTP + 加密 + 认证 + 完整性保护 = HTTPS</strong>      </li>
+<li>请求包可以被截获，但无法解密读取</li>
+<li>对于HTTPS不做赘述，下面仅附图一张<br><img src="/images/图解HTTPS.png" alt="图解HTTPS"><a id="more"></a></li>
+</ul>
+</blockquote>
+</li>
+<li>既然HTTPS那么安全可靠，那为何所有的网站不一直使用HTTPS ？<ul>
+<li>HTTPS比HTTP慢2到100倍<ul>
+<li>通信慢<blockquote>
+<p>TCP/IP之上还需要SSL通信</p>
+</blockquote>
+</li>
+<li>消耗更多的CPU和内存<blockquote>
+<p>客户端和服务端都必须加密解密运算，</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>证书的开销</li>
+</ul>
+</li>
+</ul>
+<h3 id="HTTP-TOKEN：每次请请求都携带经过加密且被签名的token"><a href="#HTTP-TOKEN：每次请请求都携带经过加密且被签名的token" class="headerlink" title="HTTP + TOKEN：每次请请求都携带经过加密且被签名的token"></a>HTTP + TOKEN：每次请请求都携带<strong>经过加密且被签名的token</strong></h3><ul>
+<li>无状态，可快速验证用户的有效性</li>
+<li>加密，防止token被读取篡改</li>
+<li>但是第三方可以用截取到的token伪造请求，所以client有被劫持的风险；签名和设置有效期可以解决<ul>
+<li>GET等非敏感请求<ul>
+<li>设置token的有效期”per session cookies, and per request” – 防CSRF</li>
+<li>对于GET，token的签名包含url，确保token和URL是对应的没被更改的 – 请求顶多被窃听<blockquote>
+<p>例如Get请求时，将parameters加入到签名里，从而防止被篡改；但仍然可以被监听.<br>  POST请求则直接对请求体做MD5计算，将MD5值加入签名.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>POST等敏感请求，用HTTPS</li>
+</ul>
+</li>
+</ul>
+<h3 id="最终选择"><a href="#最终选择" class="headerlink" title="最终选择"></a>最终选择</h3><ul>
+<li>首选HTTPS，如果不用考虑性能和money的话<blockquote>
+<p>认证可随意选择，用户名密码或者简单token</p>
+</blockquote>
+</li>
+<li>HTTP + <strong>token</strong>，请求体、相应体有被监听的风险<blockquote>
+<ol>
+<li>提前约定secret、加密方式等   </li>
+<li>每次请求都生成唯一的经过加密和签名的token</li>
+<li>将md5(requestContent/parameter)作为签名的一部分，避免劫持<br>   上面两点<strong>无法防止伪装</strong>，token可以被窃取，从而有被劫持.可以将md5(requestContent/parameter)作为签名的一部分，避免劫持，顶多有被监听的风险，因为信息不明感，从而可忽略</li>
+</ol>
+</blockquote>
+</li>
+<li>HTTP和HTTPS组合使用<ul>
+<li>非敏感信息使用HTTP + <strong>token</strong>的认证方式</li>
+<li>只有在接触敏感信息时才使用HTTPS，如登录</li>
+</ul>
+</li>
+</ul>
+<h3 id="反推TOKEN的特性"><a href="#反推TOKEN的特性" class="headerlink" title="反推TOKEN的特性"></a>反推TOKEN的特性</h3><ul>
+<li>加密，不可被窃听<blockquote>
+<ol>
+<li>加密方式</li>
+<li>秘钥</li>
+<li>对于API，一般不要求登录，所以用户名和密钥要提前约定好.</li>
+</ol>
+</blockquote>
+</li>
+<li>签名，可以证明请求没有没篡改</li>
+<li>有效期设置功能，防止被窃取后伪造请求；如果是浏览器访问也可以解决CSRF<ul>
+<li>“<strong>per session cookies, and per request tokens</strong>.”， 可以解决CSRF，但不能解决监听问题。</li>
+<li>API不存在CSRF问题，但如果token永不过期，截取到token便可以伪造请求了，所以可以为API的token设置一个长点的过期时间</li>
+<li>所以建议：<ul>
+<li>API<blockquote>
+<ul>
+<li>非敏感数据的API过期设的长一些，以免让client频繁请求token</li>
+<li>敏感数据直接升级用HTTPS</li>
+</ul>
+</blockquote>
+</li>
+<li>B/S<blockquote>
+<ul>
+<li>HTTPS + per request token</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><ul>
+<li><p>去哪儿，HTTP+TOKEN 和 HTTPS</p>
+<ul>
+<li><p>非敏感数据采用 HTTP + TOKEN</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String sign = DigestUtils.md5Hex(DigestUtils.md5Hex(secretKey + appKey) + salt);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>appKey、secretKey提前约定好<br>  没有有效期，截取sign后可以长期伪装client, 发送重复请求。<br>  没有签名， 伪装client，且可以更改请求</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>亮哥，HTTP + TOKEN</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String sign = md5(userId + timestamps + secret);<span class="comment">//per request timestamps</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>server端记录每次请求的timestamps, 当次有效<br>  没有签名， 可以被劫持，从而更改请求</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="伪装问题"><a href="#伪装问题" class="headerlink" title="伪装问题"></a>伪装问题</h3><ul>
+<li>HTTPS不存在伪装问题<blockquote>
+<ol>
+<li>有证书保证server身份，所以无法伪装server   </li>
+<li>在用户名密码不被泄露的情况下，能建立起SSL的就是真正的用户</li>
+</ol>
+</blockquote>
+</li>
+<li>HTTP虽然无法彻底解决伪装问题，但是因为token的不可更改不可窃听的属性，伪装被降级成转发监听<blockquote>
+<p>由于token是不可读，不可修改的，所以第三方无法伪造只能引用.<br>  又因为加了有效期，所以第三方最多只能转发监听</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="Client-side-Stateless-Sessions-客户端持有的-无状态session"><a href="#Client-side-Stateless-Sessions-客户端持有的-无状态session" class="headerlink" title="Client-side/Stateless Sessions (客户端持有的/无状态session)"></a>Client-side/Stateless Sessions (客户端持有的/无状态session)</h4><ul>
+<li><p>stateless</p>
+<blockquote>
+<p>只保存客户数据  </p>
+</blockquote>
+</li>
+<li><p>JWT不可被第三方 读取 和 更改</p>
+<blockquote>
+<p>签名 = 不可更改<br>  加密 = 不可读</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="Cross-Site-Request-Forgery-CSRF-跨站请求伪造"><a href="#Cross-Site-Request-Forgery-CSRF-跨站请求伪造" class="headerlink" title="Cross-Site Request Forgery (CSRF - 跨站请求伪造)"></a>Cross-Site Request Forgery (CSRF - 跨站请求伪造)</h4><ul>
+<li><p>由于同一浏览器进程下 Cookie 可见性，导致用户身份被盗用，完成恶意网站脚本中指定的操作</p>
+</li>
+<li><p>解决方案</p>
+<blockquote>
+<p>“<strong>per session cookies, and per request tokens</strong>.”  </p>
+</blockquote>
+</li>
+<li><p>案例一</p>
+<ol>
+<li>客户端每个request都必须携带 userId + <strong>timestamps</strong> + token<blockquote>
+<p>token = md5(userId + secret + timestamps**)，确保信息不被更改</p>
+</blockquote>
+</li>
+<li>timestamps只能使用一次<blockquote>
+<p>服务端先校验timestamps是否已经被处理，如果已经处理，拒绝请求</p>
+</blockquote>
+</li>
+<li>服务端根据收到的userId + timestamps和约定好的secret计算token，然后和收到的token进行比较校验</li>
+</ol>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTTPS/" rel="tag"># HTTPS</a>
+          
+            <a href="/tags/JWT/" rel="tag"># JWT</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/how-does-a-hashmap-work-in-java.html" rel="next" title="HashMap的工作原理【译文】">
+                <i class="fa fa-chevron-left"></i> HashMap的工作原理【译文】
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/以企业的方式经营家庭.html" rel="prev" title="以企业的方式经营家庭">
+                以企业的方式经营家庭 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/422.jpg"
+                alt="jisumanbu" />
+            
+              <p class="site-author-name" itemprop="name">jisumanbu</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/jisumanbu" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:jisumanbu@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP与HTTPS"><span class="nav-number">1.</span> <span class="nav-text">HTTP与HTTPS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP-TOKEN：每次请请求都携带经过加密且被签名的token"><span class="nav-number">2.</span> <span class="nav-text">HTTP + TOKEN：每次请请求都携带经过加密且被签名的token</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最终选择"><span class="nav-number">3.</span> <span class="nav-text">最终选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反推TOKEN的特性"><span class="nav-number">4.</span> <span class="nav-text">反推TOKEN的特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#案例"><span class="nav-number">5.</span> <span class="nav-text">案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#伪装问题"><span class="nav-number">6.</span> <span class="nav-text">伪装问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Client-side-Stateless-Sessions-客户端持有的-无状态session"><span class="nav-number">6.1.</span> <span class="nav-text">Client-side/Stateless Sessions (客户端持有的/无状态session)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cross-Site-Request-Forgery-CSRF-跨站请求伪造"><span class="nav-number">6.2.</span> <span class="nav-text">Cross-Site Request Forgery (CSRF - 跨站请求伪造)</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jisumanbu</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">29k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点总阅读时长">0:29</span>
+  
+</div>
+
+
+
+
+  <div style="display:none" class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span style="display:none" class="post-meta-divider">|</span>
+
+
+
+  <div style="display:none" class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.6</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.6"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.6"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.6"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.6"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.6"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
