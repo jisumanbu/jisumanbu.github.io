@@ -1,10 +1,10 @@
-http://www.bbetterman.com/知识体系总览.html
-http://www.bbetterman.com/RocketMq-in-action.html
-http://www.bbetterman.com/以企业的方式经营家庭.html
+http://www.bbetterman.com/knowledge-hierarchy.html
+http://www.bbetterman.com/rocketMq-in-action.html
+http://www.bbetterman.com/operate-family-like-a-company.html
 http://www.bbetterman.com/HTTP_HTTPS_Token.html
 http://www.bbetterman.com/how-does-a-hashmap-work-in-java.html
 http://www.bbetterman.com/redisInAction.html
-http://www.bbetterman.com/RocketMQ-2-installation-and-simple-usages.html
-http://www.bbetterman.com/RocketMQ-1-concepts.html
-http://www.bbetterman.com/为什么需要消息中间件以及消息中间件的使用场景.html
+http://www.bbetterman.com/rocketMQ-2-installation-and-simple-usages.html
+http://www.bbetterman.com/rocketMQ-1-concepts.html
+http://www.bbetterman.com/mq-why-and-where-to-use-it.html
 http://www.bbetterman.com/大规模分布式存储系统-原理解析与架构实战.html

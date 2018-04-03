@@ -133,25 +133,28 @@
 
   
 
-<meta name="description" content="contents  部署   1 Master 2 Master 2 Master - 2 Salve async 2 Master - 2 Salve sync   控制台安装 发送消息的默认约定 消费消息的默认约定 并行消息(多线程多Queue) 有序消息(单线程单一ueue) 延迟消息(单线程单一ueue)   1. 部署   下载并解压rocketmq  1 Master 启动nameSe">
-<meta name="keywords" content="MQ,RocketMQ">
+<meta name="description" content="生产者消费者模式的思考 如何多机器部署运行  &amp;lt;分布式&amp;gt;？ 挑战：queue无法跨JVM共享   如何灾备以及负载均衡？  挑战：需要一个controller做通知和分发数据   所以，需要一个独立部署的可以被多方访问的服务，其数据必须是多线程乃至分布式安全的  消息中间件是个好的选择   消息中间件的特征 queues （消息的容器） 发布/订阅（Publisher/Subscrib">
+<meta name="keywords" content="MQ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RocketMQ二安装与简单实用">
-<meta property="og:url" content="http://www.bbetterman.com/rocketMQ-2-installation-and-simple-usages.html">
+<meta property="og:title" content="为什么需要消息中间件 以及 消息中间件的使用场景">
+<meta property="og:url" content="http://www.bbetterman.com/mq-why-and-where-to-use-it.html">
 <meta property="og:site_name" content="极速漫步">
-<meta property="og:description" content="contents  部署   1 Master 2 Master 2 Master - 2 Salve async 2 Master - 2 Salve sync   控制台安装 发送消息的默认约定 消费消息的默认约定 并行消息(多线程多Queue) 有序消息(单线程单一ueue) 延迟消息(单线程单一ueue)   1. 部署   下载并解压rocketmq  1 Master 启动nameSe">
+<meta property="og:description" content="生产者消费者模式的思考 如何多机器部署运行  &amp;lt;分布式&amp;gt;？ 挑战：queue无法跨JVM共享   如何灾备以及负载均衡？  挑战：需要一个controller做通知和分发数据   所以，需要一个独立部署的可以被多方访问的服务，其数据必须是多线程乃至分布式安全的  消息中间件是个好的选择   消息中间件的特征 queues （消息的容器） 发布/订阅（Publisher/Subscrib">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.bbetterman.com/images/消息总线.jpg">
+<meta property="og:image" content="http://www.bbetterman.com/images/日志收集架构图.png">
 <meta property="og:updated_time" content="2018-04-01T08:30:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RocketMQ二安装与简单实用">
-<meta name="twitter:description" content="contents  部署   1 Master 2 Master 2 Master - 2 Salve async 2 Master - 2 Salve sync   控制台安装 发送消息的默认约定 消费消息的默认约定 并行消息(多线程多Queue) 有序消息(单线程单一ueue) 延迟消息(单线程单一ueue)   1. 部署   下载并解压rocketmq  1 Master 启动nameSe">
+<meta name="twitter:title" content="为什么需要消息中间件 以及 消息中间件的使用场景">
+<meta name="twitter:description" content="生产者消费者模式的思考 如何多机器部署运行  &amp;lt;分布式&amp;gt;？ 挑战：queue无法跨JVM共享   如何灾备以及负载均衡？  挑战：需要一个controller做通知和分发数据   所以，需要一个独立部署的可以被多方访问的服务，其数据必须是多线程乃至分布式安全的  消息中间件是个好的选择   消息中间件的特征 queues （消息的容器） 发布/订阅（Publisher/Subscrib">
+<meta name="twitter:image" content="http://www.bbetterman.com/images/消息总线.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.bbetterman.com/rocketMQ-2-installation-and-simple-usages.html"/>
+  <link rel="canonical" href="http://www.bbetterman.com/mq-why-and-where-to-use-it.html"/>
 
 
 
@@ -161,7 +164,7 @@
   };
 </script>
 
-  <title>RocketMQ二安装与简单实用 | 极速漫步</title>
+  <title>为什么需要消息中间件 以及 消息中间件的使用场景 | 极速漫步</title>
   
 
 
@@ -328,7 +331,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.bbetterman.com/rocketMQ-2-installation-and-simple-usages.html">
+    <link itemprop="mainEntityOfPage" href="http://www.bbetterman.com/mq-why-and-where-to-use-it.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jisumanbu">
@@ -345,7 +348,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">RocketMQ二安装与简单实用</h1>
+          <h1 class="post-title" itemprop="name headline">为什么需要消息中间件 以及 消息中间件的使用场景</h1>
         
 
         <div class="post-meta">
@@ -357,7 +360,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-14T02:21:26+08:00">2018-03-14</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-13T00:00:00+08:00">2018-03-13</time>
             
 
             
@@ -379,13 +382,6 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MQ/" itemprop="url" rel="index"><span itemprop="name">MQ</span></a></span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MQ/RocketMQ/" itemprop="url" rel="index"><span itemprop="name">RocketMQ</span></a></span>
 
                 
                 
@@ -413,7 +409,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">1.6k</span>
+                <span title="字数统计">1.2k</span>
               
 
               
@@ -427,7 +423,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">0:02</span>
+                <span title="阅读时长">0:01</span>
               
             </div>
           
@@ -447,104 +443,85 @@
       
 
       
-        <h6 id="contents"><a href="#contents" class="headerlink" title="contents"></a>contents</h6><blockquote>
-<ol>
-<li>部署</li>
+        <h2 id="生产者消费者模式的思考"><a href="#生产者消费者模式的思考" class="headerlink" title="生产者消费者模式的思考"></a>生产者消费者模式的思考</h2><ul>
+<li>如何多机器部署运行  &lt;分布式&gt;？<blockquote>
+<p>挑战：queue无法跨JVM共享</p>
+</blockquote>
+</li>
+<li><p>如何灾备以及负载均衡？</p>
+<blockquote>
+<p>挑战：需要一个controller做通知和分发数据</p>
+</blockquote>
+</li>
+<li><p>所以，需要一个独立部署的可以被多方访问的服务，其数据必须是多线程乃至分布式安全的<br>  消息中间件是个好的选择<br><img src="/images/消息总线.jpg" alt="消息总线图"></p>
+</li>
+</ul>
+<h2 id="消息中间件的特征"><a href="#消息中间件的特征" class="headerlink" title="消息中间件的特征"></a>消息中间件的特征</h2><ul>
+<li>queues （消息的容器）</li>
+<li><p>发布/订阅（Publisher/Subscribe） （发布者发布1条数据，会被多个订阅者消费）</p>
+<blockquote>
+<p>将增量式更新数据推给各个订阅的client，并保证每个client都收到</p>
+</blockquote>
+<blockquote>
+<p>将数据平均发送给每个订阅者（负载均衡，例如：RocketMQ的CLUSTERING消息模型）</p>
+</blockquote>
+</li>
+<li>P2P（Peer-to-Peer） （1条消息只会被消费一次）<a id="more"></a>
+<h2 id="对消息中间件的一般要求"><a href="#对消息中间件的一般要求" class="headerlink" title="对消息中间件的一般要求"></a>对消息中间件的一般要求</h2>  服务的高可用性（主从或者分布式）<br>  消息的低延迟、极少量丢失或不丢失</li>
+</ul>
+<h2 id="对消息中间件的进一步要求："><a href="#对消息中间件的进一步要求：" class="headerlink" title="对消息中间件的进一步要求："></a>对消息中间件的进一步要求：</h2><pre><code>消息不重复
+支持事务
+负载均衡
+</code></pre><h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><h3 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h3><pre><code>将传统线性程序，转为并发分布式
+</code></pre><ul>
+<li>传统线性做法：<pre><code>1. 动作一
+2. 动作二
+</code></pre></li>
+<li>利用消息中间件，并发处理。（发送一个订阅消息，然后由各个消费者并行处理）<ul>
+<li>consumer1：动作一 （只需保证动作一最终一定成功便可，不关心时效性）</li>
+<li>consumer2：动作二</li>
+</ul>
+</li>
+</ul>
+<h3 id="解耦"><a href="#解耦" class="headerlink" title="解耦"></a>解耦</h3><pre><code>在新增功能点时，无需更改主流程代码或逻辑
+</code></pre><ul>
+<li>如果要在动作二后增加动作三，只需再增加相应的订阅者，无需更改主流程<ul>
+<li>consumer3：发送短信通知下单者支付成功。</li>
+</ul>
+</li>
+<li>把支付、退款从hotel移到到wfinance中统一管理</li>
+</ul>
+<h3 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h3><ul>
+<li>多个consumer分布在多个不同的机器上，热部署.如rocketMQ的集群模式<blockquote>
+<p>consumer.setMessageModel(MessageModel.CLUSTERING);</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="防治消息洪流"><a href="#防治消息洪流" class="headerlink" title="防治消息洪流"></a>防治消息洪流</h3><ul>
+<li><p>要求消息中间件有以下两个能力</p>
+<blockquote>
+<p>强有力的消息堆积</p>
+</blockquote>
+<blockquote>
+<p>持久化</p>
+</blockquote>
+</li>
+<li>消息队列可以作为 缓冲区域 存在</li>
+<li>实例见下文的 日志收集 案例</li>
+</ul>
+<h3 id="push数据"><a href="#push数据" class="headerlink" title="push数据"></a>push数据</h3><pre><code>场景描述：各个client每10分钟请求一次我们的API，以获取我们的增量数据
+</code></pre><h3 id="日志收集"><a href="#日志收集" class="headerlink" title="日志收集"></a>日志收集</h3><ol>
+<li>Kafka：接收用户日志的消息队列。<br>Kafka可以快速接收所有收集过来的日志，并提供堆积和持久化功能，以便Logstash等后续消费者慢慢处理。</li>
+<li>Logstash：做日志解析，统一成JSON输出给Elasticsearch。</li>
+<li>Elasticsearch：实时日志分析服务的核心技术，一个schemaless，实时的数据存储服务，通过index组织数据，兼具强大的搜索和统计功能。</li>
+<li>Kibana：基于Elasticsearch的数据可视化组件，超强的数据可视化能力是众多公司选择ELK stack的重要原因。<br><img src="/images/日志收集架构图.png" alt="日志收集架构图"></li>
 </ol>
-<ul>
-<li>1 Master</li>
-<li>2 Master</li>
-<li>2 Master - 2 Salve async</li>
-<li>2 Master - 2 Salve sync</li>
+<h2 id="References"><a href="#References" class="headerlink" title="References :"></a>References :</h2><ul>
+<li><a href="http://blog.csdn.net/column/details/sys-communication.html" target="_blank" rel="noopener">系统间通信系列博文</a></li>
+<li><a href="http://blog.csdn.net/df_xiao/article/details/50522476" target="_blank" rel="noopener">RocketMQ简介及安装</a></li>
+<li><a href="http://www.cnblogs.com/mxmbk/articles/6598126.html" target="_blank" rel="noopener">消息队列的使用场景</a></li>
 </ul>
-<ol>
-<li>控制台安装</li>
-<li>发送消息的默认约定</li>
-<li>消费消息的默认约定</li>
-<li>并行消息(多线程多Queue)</li>
-<li>有序消息(单线程单一ueue)</li>
-<li>延迟消息(单线程单一ueue)</li>
-</ol>
-</blockquote>
-<h3 id="1-部署"><a href="#1-部署" class="headerlink" title="1. 部署"></a>1. 部署</h3><blockquote>
-<p>  下载并解压<a href="http://mirrors.tuna.tsinghua.edu.cn/apache/incubator/rocketmq/4.0.0-incubating/rocketmq-all-4.0.0-incubating-bin-release.zip" target="_blank" rel="noopener">rocketmq</a></p>
-</blockquote>
-<h5 id="1-Master"><a href="#1-Master" class="headerlink" title="1 Master"></a>1 Master</h5><ul>
-<li><p>启动nameServer</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup sh bin/mqnamesrv &amp;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动broker</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup sh bin/mqbroker -n localhost:9876 -c conf/broker.conf &amp;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>shutdown</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bin/mqshutdown broker</span><br><span class="line">bin/mqshutdown namesrv</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h5 id="2-Master"><a href="#2-Master" class="headerlink" title="2 Master"></a>2 Master</h5><pre><code>TODO
-</code></pre><h5 id="2-Master-2-Salve-async"><a href="#2-Master-2-Salve-async" class="headerlink" title="2 Master - 2 Salve async"></a>2 Master - 2 Salve async</h5><pre><code>TODO
-</code></pre><h5 id="2-Master-2-Salve-sync"><a href="#2-Master-2-Salve-sync" class="headerlink" title="2 Master - 2 Salve sync"></a>2 Master - 2 Salve sync</h5><pre><code>TODO
-</code></pre><a id="more"></a>
-<h4 id="2-安装控制台"><a href="#2-安装控制台" class="headerlink" title="2. 安装控制台"></a>2. 安装控制台</h4><blockquote>
-<p>控制台使用apache/incubator-rocketmq-externals下的rocketmq-console</p>
-<ul>
-<li>clone：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/apache/incubator-rocketmq-externals.git</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<ul>
-<li><p>打包</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean package -Dmaven.test.skip=true</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar rocketmq-console-ng-1.0.0.jar --server.port=12581 --rocketmq.config.namesrvAddr=localhost:9876</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>访问控制台：<a href="http://localhost:12581" target="_blank" rel="noopener">http://localhost:12581</a></p>
-</li>
-</ul>
-<h4 id="3-发送消息的默认约定："><a href="#3-发送消息的默认约定：" class="headerlink" title="3. 发送消息的默认约定："></a>3. 发送消息的默认约定：</h4><ul>
-<li>一个JVM一个MqMessageSender实例，后续视情况是否改为prototype</li>
-<li>默认发送方式为同步 - sendMsg(String, String, String, String)</li>
-<li><p>client没有必要retry</p>
-<blockquote>
-<p>rocketMQ已经有retry, MqMessageSender里也会做必要的失败记录和服务不可用时的retry</p>
-<ul>
-<li>rocketMQ的retry  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">defaultSendingTimeout = 3000 mills</span><br><span class="line">retryTimesWhenSendFailed = 2</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<ul>
-<li>如果发送失败，确保消息不丢失</li>
-<li>MqMessageSender会保存消息到DB，同时抛出unCheckedException<ul>
-<li>（TODO）服务可用后，可以从DB中重新发送</li>
-<li>应用程序接收到Exception后，做必要处理</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>producerGroup</p>
-<ul>
-<li><p>作用：</p>
-<blockquote>
-<ul>
-<li>标识一类 Producer</li>
-<li>可以通过运维工具查询这个发送消息应用下有多个 Producer 实例</li>
-<li>发送分布式事务消息时，如果 Producer 中途意外宕机，Broker 会主动回调 Producer Group 内的任意一台机器来确认事务状态。</li>
-</ul>
-</blockquote>
-</li>
-<li><p>one producerGroup per application as default</p>
-<blockquote>
-<ul>
-<li>一个 Producer Group 下包含多个 Producer 实例，可以是多台机器， 也可以是一台机器的多个进程，或者一个进程的多个 Producer 对象。</li>
-<li>一个 Producer Group 可以发送多个 Topic 消息.</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="4-消费消息的默认约定："><a href="#4-消费消息的默认约定：" class="headerlink" title="4. 消费消息的默认约定："></a>4. 消费消息的默认约定：</h4><pre><code>TODO
-</code></pre><h4 id="5-并行消息-多线程多Queue"><a href="#5-并行消息-多线程多Queue" class="headerlink" title="5. 并行消息(多线程多Queue)"></a>5. 并行消息(多线程多Queue)</h4><h4 id="6-有序消息-单线程单一ueue"><a href="#6-有序消息-单线程单一ueue" class="headerlink" title="6. 有序消息(单线程单一ueue)"></a>6. 有序消息(单线程单一ueue)</h4><h4 id="7-延迟消息-单线程单一ueue"><a href="#7-延迟消息-单线程单一ueue" class="headerlink" title="7. 延迟消息(单线程单一ueue)"></a>7. 延迟消息(单线程单一ueue)</h4>
+
       
     </div>
 
@@ -566,8 +543,6 @@
           
             <a href="/tags/MQ/" rel="tag"># MQ</a>
           
-            <a href="/tags/RocketMQ/" rel="tag"># RocketMQ</a>
-          
         </div>
       
 
@@ -579,8 +554,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/rocketMQ-1-concepts.html" rel="next" title="RocketMQ一基本概念">
-                <i class="fa fa-chevron-left"></i> RocketMQ一基本概念
+              <a href="/大规模分布式存储系统-原理解析与架构实战.html" rel="next" title="大规模分布式存储系统-原理解析与架构实战">
+                <i class="fa fa-chevron-left"></i> 大规模分布式存储系统-原理解析与架构实战
               </a>
             
           </div>
@@ -589,8 +564,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/redisInAction.html" rel="prev" title="Redis实战（Redis IN ACTION）">
-                Redis实战（Redis IN ACTION） <i class="fa fa-chevron-right"></i>
+              <a href="/rocketMQ-1-concepts.html" rel="prev" title="RocketMQ一基本概念">
+                RocketMQ一基本概念 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -783,7 +758,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#contents"><span class="nav-number">1.</span> <span class="nav-text">contents</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-部署"><span class="nav-number"></span> <span class="nav-text">1. 部署</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-Master"><span class="nav-number"></span> <span class="nav-text">1 Master</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Master"><span class="nav-number"></span> <span class="nav-text">2 Master</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Master-2-Salve-async"><span class="nav-number"></span> <span class="nav-text">2 Master - 2 Salve async</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Master-2-Salve-sync"><span class="nav-number"></span> <span class="nav-text">2 Master - 2 Salve sync</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-安装控制台"><span class="nav-number"></span> <span class="nav-text">2. 安装控制台</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-发送消息的默认约定："><span class="nav-number"></span> <span class="nav-text">3. 发送消息的默认约定：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-消费消息的默认约定："><span class="nav-number"></span> <span class="nav-text">4. 消费消息的默认约定：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-并行消息-多线程多Queue"><span class="nav-number"></span> <span class="nav-text">5. 并行消息(多线程多Queue)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-有序消息-单线程单一ueue"><span class="nav-number"></span> <span class="nav-text">6. 有序消息(单线程单一ueue)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-延迟消息-单线程单一ueue"><span class="nav-number"></span> <span class="nav-text">7. 延迟消息(单线程单一ueue)</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#生产者消费者模式的思考"><span class="nav-number">1.</span> <span class="nav-text">生产者消费者模式的思考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#消息中间件的特征"><span class="nav-number">2.</span> <span class="nav-text">消息中间件的特征</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对消息中间件的一般要求"><span class="nav-number">3.</span> <span class="nav-text">对消息中间件的一般要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对消息中间件的进一步要求："><span class="nav-number">4.</span> <span class="nav-text">对消息中间件的进一步要求：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用场景"><span class="nav-number">5.</span> <span class="nav-text">应用场景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#异步"><span class="nav-number">5.1.</span> <span class="nav-text">异步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解耦"><span class="nav-number">5.2.</span> <span class="nav-text">解耦</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#负载均衡"><span class="nav-number">5.3.</span> <span class="nav-text">负载均衡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#防治消息洪流"><span class="nav-number">5.4.</span> <span class="nav-text">防治消息洪流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#push数据"><span class="nav-number">5.5.</span> <span class="nav-text">push数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#日志收集"><span class="nav-number">5.6.</span> <span class="nav-text">日志收集</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">6.</span> <span class="nav-text">References :</span></a></li></ol></div>
             
 
           </div>

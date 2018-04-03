@@ -133,25 +133,28 @@
 
   
 
-<meta name="description" content="contents  部署   1 Master 2 Master 2 Master - 2 Salve async 2 Master - 2 Salve sync   控制台安装 发送消息的默认约定 消费消息的默认约定 并行消息(多线程多Queue) 有序消息(单线程单一ueue) 延迟消息(单线程单一ueue)   1. 部署   下载并解压rocketmq  1 Master 启动nameSe">
-<meta name="keywords" content="MQ,RocketMQ">
+<meta name="description" content="想法的产生16年看着《管理的实践》却不知道何为公司；认识老婆后便萌生了以企业的方式经营家庭的想法。想着”以企业的方式经营家庭”可以   促使我去了解”企业”到底是什么，为以后的创业做铺垫 目标管理的实践：家庭目标 &amp;amp; 个人目标的平衡 从一个人变成了一家人，从而必须以组织的角度重新审视”家” 摆脱浑浑噩噩   最近又重新饱受焦虑的困扰，所以迫使着重新梳理了下目标；再加上和老婆生活上的小摩擦让">
+<meta name="keywords" content="strategy">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RocketMQ二安装与简单实用">
-<meta property="og:url" content="http://www.bbetterman.com/rocketMQ-2-installation-and-simple-usages.html">
+<meta property="og:title" content="以企业的方式经营家庭">
+<meta property="og:url" content="http://www.bbetterman.com/operate-family-like-a-company.html">
 <meta property="og:site_name" content="极速漫步">
-<meta property="og:description" content="contents  部署   1 Master 2 Master 2 Master - 2 Salve async 2 Master - 2 Salve sync   控制台安装 发送消息的默认约定 消费消息的默认约定 并行消息(多线程多Queue) 有序消息(单线程单一ueue) 延迟消息(单线程单一ueue)   1. 部署   下载并解压rocketmq  1 Master 启动nameSe">
+<meta property="og:description" content="想法的产生16年看着《管理的实践》却不知道何为公司；认识老婆后便萌生了以企业的方式经营家庭的想法。想着”以企业的方式经营家庭”可以   促使我去了解”企业”到底是什么，为以后的创业做铺垫 目标管理的实践：家庭目标 &amp;amp; 个人目标的平衡 从一个人变成了一家人，从而必须以组织的角度重新审视”家” 摆脱浑浑噩噩   最近又重新饱受焦虑的困扰，所以迫使着重新梳理了下目标；再加上和老婆生活上的小摩擦让">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.bbetterman.com/images/企业类型.png">
+<meta property="og:image" content="http://www.bbetterman.com/images/目标.jpeg">
 <meta property="og:updated_time" content="2018-04-01T08:30:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RocketMQ二安装与简单实用">
-<meta name="twitter:description" content="contents  部署   1 Master 2 Master 2 Master - 2 Salve async 2 Master - 2 Salve sync   控制台安装 发送消息的默认约定 消费消息的默认约定 并行消息(多线程多Queue) 有序消息(单线程单一ueue) 延迟消息(单线程单一ueue)   1. 部署   下载并解压rocketmq  1 Master 启动nameSe">
+<meta name="twitter:title" content="以企业的方式经营家庭">
+<meta name="twitter:description" content="想法的产生16年看着《管理的实践》却不知道何为公司；认识老婆后便萌生了以企业的方式经营家庭的想法。想着”以企业的方式经营家庭”可以   促使我去了解”企业”到底是什么，为以后的创业做铺垫 目标管理的实践：家庭目标 &amp;amp; 个人目标的平衡 从一个人变成了一家人，从而必须以组织的角度重新审视”家” 摆脱浑浑噩噩   最近又重新饱受焦虑的困扰，所以迫使着重新梳理了下目标；再加上和老婆生活上的小摩擦让">
+<meta name="twitter:image" content="http://www.bbetterman.com/images/企业类型.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.bbetterman.com/rocketMQ-2-installation-and-simple-usages.html"/>
+  <link rel="canonical" href="http://www.bbetterman.com/operate-family-like-a-company.html"/>
 
 
 
@@ -161,7 +164,7 @@
   };
 </script>
 
-  <title>RocketMQ二安装与简单实用 | 极速漫步</title>
+  <title>以企业的方式经营家庭 | 极速漫步</title>
   
 
 
@@ -328,7 +331,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.bbetterman.com/rocketMQ-2-installation-and-simple-usages.html">
+    <link itemprop="mainEntityOfPage" href="http://www.bbetterman.com/operate-family-like-a-company.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="jisumanbu">
@@ -345,7 +348,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">RocketMQ二安装与简单实用</h1>
+          <h1 class="post-title" itemprop="name headline">以企业的方式经营家庭</h1>
         
 
         <div class="post-meta">
@@ -357,7 +360,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-14T02:21:26+08:00">2018-03-14</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-17T17:16:15+08:00">2018-03-17</time>
             
 
             
@@ -378,14 +381,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MQ/" itemprop="url" rel="index"><span itemprop="name">MQ</span></a></span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/MQ/RocketMQ/" itemprop="url" rel="index"><span itemprop="name">RocketMQ</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/BetterLife/" itemprop="url" rel="index"><span itemprop="name">BetterLife</span></a></span>
 
                 
                 
@@ -413,7 +409,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">1.6k</span>
+                <span title="字数统计">813</span>
               
 
               
@@ -427,7 +423,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">0:02</span>
+                <span title="阅读时长">0:01</span>
               
             </div>
           
@@ -447,104 +443,77 @@
       
 
       
-        <h6 id="contents"><a href="#contents" class="headerlink" title="contents"></a>contents</h6><blockquote>
-<ol>
-<li>部署</li>
+        <h2 id="想法的产生"><a href="#想法的产生" class="headerlink" title="想法的产生"></a>想法的产生</h2><p>16年看着《管理的实践》却不知道何为公司；认识老婆后便萌生了以企业的方式经营家庭的想法。想着”以企业的方式经营家庭”可以</p>
+<blockquote>
+<ul>
+<li>促使我去了解”企业”到底是什么，为以后的创业做铺垫</li>
+<li>目标管理的实践：家庭目标 &amp; 个人目标的平衡</li>
+<li>从一个人变成了一家人，从而必须以组织的角度重新审视”家”</li>
+<li>摆脱浑浑噩噩</li>
+</ul>
+</blockquote>
+<p>最近又重新饱受焦虑的困扰，所以迫使着重新梳理了下目标；再加上和老婆生活上的小摩擦让我坚定了这一想法，决定立即实施。</p>
+<h2 id="家庭企业的建立"><a href="#家庭企业的建立" class="headerlink" title="家庭企业的建立"></a>家庭企业的建立</h2><h3 id="家庭适用有限合伙企业"><a href="#家庭适用有限合伙企业" class="headerlink" title="家庭适用有限合伙企业"></a>家庭适用<strong>有限合伙企业</strong></h3><pre><code>从下图中可以很快发现，&quot;有限合伙企业&quot;和&quot;家庭&quot;最贴切（夫妻双方为普通合伙人，父母孩子皆为有限合伙人）。
+</code></pre><p> <img src="/images/企业类型.png" alt="企业类型"></p>
+<h3 id="有限合伙企业成员的角色、权利、义务"><a href="#有限合伙企业成员的角色、权利、义务" class="headerlink" title="有限合伙企业成员的角色、权利、义务"></a>有限合伙企业成员的角色、权利、义务</h3><ul>
+<li>夫妻，普通合伙人，以预算的方式分配企业所得，承担<strong>无限连带责任</strong></li>
+<li>父母，有限合伙人，参与固定分红以及分享一定应急资金，承担有限责任（带孩子等）</li>
+<li>孩子，战略性投资项目（因为没有投入和不承担责任所以不应作为合伙人而存在），享受预算优先权，不承担任何责任</li>
+</ul>
+<h3 id="合伙协议，按企业法应包含如下内容："><a href="#合伙协议，按企业法应包含如下内容：" class="headerlink" title="合伙协议，按企业法应包含如下内容："></a><strong>合伙协议</strong>，按企业法应包含如下内容：</h3><ol>
+<li>普通合伙人和有限合伙人的姓名或者名称、住所；<blockquote>
+<p>略</p>
+</blockquote>
+</li>
+<li>执行事务合伙人应具备的条件和选择程序；<blockquote>
+<p>夫妻两人皆为执行事务合伙人，投票权完全相同</p>
+</blockquote>
+</li>
+<li>执行事务合伙人权限与违约处理办法；<blockquote>
+<ul>
+<li>没有特别附加权限，等同普通合伙人权益；</li>
+<li><del>违约？ 什么约？</del></li>
+</ul>
+</blockquote>
+</li>
+<li>执行事务合伙人的除名条件和更换程序；<blockquote>
+<p>不会更换，除非散货</p>
+</blockquote>
+</li>
+<li>有限合伙人入伙、退伙的条件、程序以及相关责任；<blockquote>
+<p>参照婚姻法中离婚的相关条款</p>
+</blockquote>
+</li>
+<li>有限合伙人和普通合伙人相互转变程序。<blockquote>
+<p>合伙人角色不会发生变化</p>
+</blockquote>
+</li>
 </ol>
-<ul>
-<li>1 Master</li>
-<li>2 Master</li>
-<li>2 Master - 2 Salve async</li>
-<li>2 Master - 2 Salve sync</li>
-</ul>
+<h2 id="如何经营家庭有限合伙企业"><a href="#如何经营家庭有限合伙企业" class="headerlink" title="如何经营家庭有限合伙企业"></a>如何经营家庭有限合伙企业</h2><h3 id="目标驱动"><a href="#目标驱动" class="headerlink" title="目标驱动"></a>目标驱动</h3><pre><code>以目标驱动企业日常运营
+</code></pre><ul>
+<li>目标设定<br> <img src="/images/目标.jpeg" alt="目标"></li>
+<li>企业目标和个人目标的平衡<blockquote>
+<p>1.<br>2. </p>
+</blockquote>
+</li>
+<li>根据目标推导出的个人计划<blockquote>
 <ol>
-<li>控制台安装</li>
-<li>发送消息的默认约定</li>
-<li>消费消息的默认约定</li>
-<li>并行消息(多线程多Queue)</li>
-<li>有序消息(单线程单一ueue)</li>
-<li>延迟消息(单线程单一ueue)</li>
+<li></li>
+<li></li>
 </ol>
 </blockquote>
-<h3 id="1-部署"><a href="#1-部署" class="headerlink" title="1. 部署"></a>1. 部署</h3><blockquote>
-<p>  下载并解压<a href="http://mirrors.tuna.tsinghua.edu.cn/apache/incubator/rocketmq/4.0.0-incubating/rocketmq-all-4.0.0-incubating-bin-release.zip" target="_blank" rel="noopener">rocketmq</a></p>
-</blockquote>
-<h5 id="1-Master"><a href="#1-Master" class="headerlink" title="1 Master"></a>1 Master</h5><ul>
-<li><p>启动nameServer</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup sh bin/mqnamesrv &amp;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动broker</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup sh bin/mqbroker -n localhost:9876 -c conf/broker.conf &amp;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>shutdown</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bin/mqshutdown broker</span><br><span class="line">bin/mqshutdown namesrv</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h5 id="2-Master"><a href="#2-Master" class="headerlink" title="2 Master"></a>2 Master</h5><pre><code>TODO
-</code></pre><h5 id="2-Master-2-Salve-async"><a href="#2-Master-2-Salve-async" class="headerlink" title="2 Master - 2 Salve async"></a>2 Master - 2 Salve async</h5><pre><code>TODO
-</code></pre><h5 id="2-Master-2-Salve-sync"><a href="#2-Master-2-Salve-sync" class="headerlink" title="2 Master - 2 Salve sync"></a>2 Master - 2 Salve sync</h5><pre><code>TODO
-</code></pre><a id="more"></a>
-<h4 id="2-安装控制台"><a href="#2-安装控制台" class="headerlink" title="2. 安装控制台"></a>2. 安装控制台</h4><blockquote>
-<p>控制台使用apache/incubator-rocketmq-externals下的rocketmq-console</p>
-<ul>
-<li>clone：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/apache/incubator-rocketmq-externals.git</span><br></pre></td></tr></table></figure>
-</li>
+<h3 id="预算式财政（待详细）"><a href="#预算式财政（待详细）" class="headerlink" title="预算式财政（待详细）"></a>预算式财政（待详细）</h3><ul>
+<li>保险</li>
+<li>风险资金</li>
+<li>房租</li>
+<li>老婆护肤品</li>
+<li>老婆衣服</li>
+<li>生活费</li>
+<li>旅游</li>
 </ul>
-</blockquote>
-<ul>
-<li><p>打包</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean package -Dmaven.test.skip=true</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar rocketmq-console-ng-1.0.0.jar --server.port=12581 --rocketmq.config.namesrvAddr=localhost:9876</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>访问控制台：<a href="http://localhost:12581" target="_blank" rel="noopener">http://localhost:12581</a></p>
-</li>
-</ul>
-<h4 id="3-发送消息的默认约定："><a href="#3-发送消息的默认约定：" class="headerlink" title="3. 发送消息的默认约定："></a>3. 发送消息的默认约定：</h4><ul>
-<li>一个JVM一个MqMessageSender实例，后续视情况是否改为prototype</li>
-<li>默认发送方式为同步 - sendMsg(String, String, String, String)</li>
-<li><p>client没有必要retry</p>
-<blockquote>
-<p>rocketMQ已经有retry, MqMessageSender里也会做必要的失败记录和服务不可用时的retry</p>
-<ul>
-<li>rocketMQ的retry  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">defaultSendingTimeout = 3000 mills</span><br><span class="line">retryTimesWhenSendFailed = 2</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<ul>
-<li>如果发送失败，确保消息不丢失</li>
-<li>MqMessageSender会保存消息到DB，同时抛出unCheckedException<ul>
-<li>（TODO）服务可用后，可以从DB中重新发送</li>
-<li>应用程序接收到Exception后，做必要处理</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>producerGroup</p>
-<ul>
-<li><p>作用：</p>
-<blockquote>
-<ul>
-<li>标识一类 Producer</li>
-<li>可以通过运维工具查询这个发送消息应用下有多个 Producer 实例</li>
-<li>发送分布式事务消息时，如果 Producer 中途意外宕机，Broker 会主动回调 Producer Group 内的任意一台机器来确认事务状态。</li>
-</ul>
-</blockquote>
-</li>
-<li><p>one producerGroup per application as default</p>
-<blockquote>
-<ul>
-<li>一个 Producer Group 下包含多个 Producer 实例，可以是多台机器， 也可以是一台机器的多个进程，或者一个进程的多个 Producer 对象。</li>
-<li>一个 Producer Group 可以发送多个 Topic 消息.</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="4-消费消息的默认约定："><a href="#4-消费消息的默认约定：" class="headerlink" title="4. 消费消息的默认约定："></a>4. 消费消息的默认约定：</h4><pre><code>TODO
-</code></pre><h4 id="5-并行消息-多线程多Queue"><a href="#5-并行消息-多线程多Queue" class="headerlink" title="5. 并行消息(多线程多Queue)"></a>5. 并行消息(多线程多Queue)</h4><h4 id="6-有序消息-单线程单一ueue"><a href="#6-有序消息-单线程单一ueue" class="headerlink" title="6. 有序消息(单线程单一ueue)"></a>6. 有序消息(单线程单一ueue)</h4><h4 id="7-延迟消息-单线程单一ueue"><a href="#7-延迟消息-单线程单一ueue" class="headerlink" title="7. 延迟消息(单线程单一ueue)"></a>7. 延迟消息(单线程单一ueue)</h4>
+
       
     </div>
 
@@ -564,9 +533,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/MQ/" rel="tag"># MQ</a>
-          
-            <a href="/tags/RocketMQ/" rel="tag"># RocketMQ</a>
+            <a href="/tags/strategy/" rel="tag"># strategy</a>
           
         </div>
       
@@ -579,8 +546,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/rocketMQ-1-concepts.html" rel="next" title="RocketMQ一基本概念">
-                <i class="fa fa-chevron-left"></i> RocketMQ一基本概念
+              <a href="/HTTP_HTTPS_Token.html" rel="next" title="HTTP、HTTPS、TOKEN的比较 以及 如何选择">
+                <i class="fa fa-chevron-left"></i> HTTP、HTTPS、TOKEN的比较 以及 如何选择
               </a>
             
           </div>
@@ -589,8 +556,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/redisInAction.html" rel="prev" title="Redis实战（Redis IN ACTION）">
-                Redis实战（Redis IN ACTION） <i class="fa fa-chevron-right"></i>
+              <a href="/rocketMq-in-action.html" rel="prev" title="RocketMq实战">
+                RocketMq实战 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -783,7 +750,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#contents"><span class="nav-number">1.</span> <span class="nav-text">contents</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-部署"><span class="nav-number"></span> <span class="nav-text">1. 部署</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-Master"><span class="nav-number"></span> <span class="nav-text">1 Master</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Master"><span class="nav-number"></span> <span class="nav-text">2 Master</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Master-2-Salve-async"><span class="nav-number"></span> <span class="nav-text">2 Master - 2 Salve async</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Master-2-Salve-sync"><span class="nav-number"></span> <span class="nav-text">2 Master - 2 Salve sync</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-安装控制台"><span class="nav-number"></span> <span class="nav-text">2. 安装控制台</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-发送消息的默认约定："><span class="nav-number"></span> <span class="nav-text">3. 发送消息的默认约定：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-消费消息的默认约定："><span class="nav-number"></span> <span class="nav-text">4. 消费消息的默认约定：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-并行消息-多线程多Queue"><span class="nav-number"></span> <span class="nav-text">5. 并行消息(多线程多Queue)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-有序消息-单线程单一ueue"><span class="nav-number"></span> <span class="nav-text">6. 有序消息(单线程单一ueue)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-延迟消息-单线程单一ueue"><span class="nav-number"></span> <span class="nav-text">7. 延迟消息(单线程单一ueue)</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#想法的产生"><span class="nav-number">1.</span> <span class="nav-text">想法的产生</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#家庭企业的建立"><span class="nav-number">2.</span> <span class="nav-text">家庭企业的建立</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#家庭适用有限合伙企业"><span class="nav-number">2.1.</span> <span class="nav-text">家庭适用有限合伙企业</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有限合伙企业成员的角色、权利、义务"><span class="nav-number">2.2.</span> <span class="nav-text">有限合伙企业成员的角色、权利、义务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合伙协议，按企业法应包含如下内容："><span class="nav-number">2.3.</span> <span class="nav-text">合伙协议，按企业法应包含如下内容：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何经营家庭有限合伙企业"><span class="nav-number">3.</span> <span class="nav-text">如何经营家庭有限合伙企业</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目标驱动"><span class="nav-number">3.1.</span> <span class="nav-text">目标驱动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预算式财政（待详细）"><span class="nav-number">3.2.</span> <span class="nav-text">预算式财政（待详细）</span></a></li></ol></li></ol></div>
             
 
           </div>
