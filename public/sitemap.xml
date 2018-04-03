@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.bbetterman.com/rocketMQ-1-concepts.html</loc>
+    <loc>http://www.bbetterman.com/rocketMq-in-action.html</loc>
     
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
     
@@ -10,6 +10,13 @@
   
   <url>
     <loc>http://www.bbetterman.com/HTTP_HTTPS_Token.html</loc>
+    
+    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.bbetterman.com/knowledge-hierarchy.html</loc>
     
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
     
@@ -44,14 +51,7 @@
   </url>
   
   <url>
-    <loc>http://www.bbetterman.com/knowledge-hierarchy.html</loc>
-    
-    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.bbetterman.com/rocketMq-in-action.html</loc>
+    <loc>http://www.bbetterman.com/rocketMQ-1-concepts.html</loc>
     
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
     
