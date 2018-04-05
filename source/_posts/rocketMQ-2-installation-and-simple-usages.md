@@ -14,7 +14,7 @@ tags:
   >* 1 Master
   >* 2 Master
   >* 2 Master - 2 Salve async
-  >* 2 Master - 2 Salve sync
+  >* 2 Master - 2 Salve sync    
  >##### 控制台安装
  >##### 发送消息的默认约定
  >##### 消费消息的默认约定
