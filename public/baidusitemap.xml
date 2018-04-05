@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://www.bbetterman.com/rocketMQ-2-installation-and-simple-usages.html</loc>
+    <loc>http://www.bbetterman.com/rocketMQ-1-concepts.html</loc>
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
     <data>
         <display>
-        <title>RocketMQ二安装与简单实用</title>
-        <pubTime>2018-03-13T18:21:26.000Z</pubTime>
+        <title>RocketMQ一基本概念</title>
+        <pubTime>2018-03-13T16:21:26.000Z</pubTime>
         
         <tag>MQ</tag>
          
@@ -154,12 +154,12 @@
 
     
   <url>
-    <loc>http://www.bbetterman.com/rocketMQ-1-concepts.html</loc>
+    <loc>http://www.bbetterman.com/rocketMQ-2-installation-and-simple-usages.html</loc>
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
     <data>
         <display>
-        <title>RocketMQ一基本概念</title>
-        <pubTime>2018-03-13T16:21:26.000Z</pubTime>
+        <title>RocketMQ二安装与简单实用</title>
+        <pubTime>2018-03-13T18:21:26.000Z</pubTime>
         
         <tag>MQ</tag>
          

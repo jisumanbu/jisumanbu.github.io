@@ -73,3 +73,7 @@ Java HotSpot(TM) 64-Bit Server VM warning: Cannot open file /dev/shm/mq_gc_pid45
 45260:M 03 Apr 10:15:27.099 * Background saving started by pid 45536
 45536:C 03 Apr 10:16:03.046 * DB saved on disk
 45260:M 03 Apr 10:16:03.269 * Background saving terminated with success
+45260:M 04 Apr 09:55:39.365 * 1 changes in 900 seconds. Saving...
+45260:M 04 Apr 09:55:39.366 * Background saving started by pid 49463
+49463:C 04 Apr 09:56:07.467 * DB saved on disk
+45260:M 04 Apr 09:56:07.533 * Background saving terminated with success
