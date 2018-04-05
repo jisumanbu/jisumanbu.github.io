@@ -9,20 +9,20 @@ tags:
 - RocketMQ
 ---
 
-#### contents
- >##### 部署
-  >* 1 Master
-  >* 2 Master
-  >* 2 Master - 2 Salve async
-  >* 2 Master - 2 Salve sync    
- >##### 控制台安装
- >##### 发送消息的默认约定
- >##### 消费消息的默认约定
- >##### 并行消息(多线程多Queue)
- >##### 有序消息(单线程单一ueue)
- >##### 延迟消息(单线程单一ueue)
+### 目录
+#### 部署
+ >* 1 Master
+ >* 2 Master
+ >* 2 Master - 2 Salve async
+ >* 2 Master - 2 Salve sync            
+#### 控制台安装
+#### 发送消息的默认约定
+#### 消费消息的默认约定
+#### 并行消息(多线程多Queue)
+#### 有序消息(单线程单一ueue)
+#### 延迟消息(单线程单一ueue)
 <!--more-->
-
+----
 ### 部署
     下载并解压[rocketmq](http://mirrors.tuna.tsinghua.edu.cn/apache/incubator/rocketmq/4.0.0-incubating/rocketmq-all-4.0.0-incubating-bin-release.zip )
 #### 1 Master
