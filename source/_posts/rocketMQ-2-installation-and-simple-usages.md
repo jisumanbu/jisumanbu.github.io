@@ -9,22 +9,23 @@ tags:
 - RocketMQ
 ---
 
-###### contents
->1. 部署
->* 1 Master
->* 2 Master
->* 2 Master - 2 Salve async
->* 2 Master - 2 Salve sync
->2. 控制台安装
->3. 发送消息的默认约定
->4. 消费消息的默认约定
->5. 并行消息(多线程多Queue)
->6. 有序消息(单线程单一ueue)
->7. 延迟消息(单线程单一ueue)
+#### contents
+ >##### 部署
+  >* 1 Master
+  >* 2 Master
+  >* 2 Master - 2 Salve async
+  >* 2 Master - 2 Salve sync
+ >##### 控制台安装
+ >##### 发送消息的默认约定
+ >##### 消费消息的默认约定
+ >##### 并行消息(多线程多Queue)
+ >##### 有序消息(单线程单一ueue)
+ >##### 延迟消息(单线程单一ueue)
+<!--more-->
 
-### 1. 部署
->   下载并解压[rocketmq](http://mirrors.tuna.tsinghua.edu.cn/apache/incubator/rocketmq/4.0.0-incubating/rocketmq-all-4.0.0-incubating-bin-release.zip )
-##### 1 Master
+### 部署
+    下载并解压[rocketmq](http://mirrors.tuna.tsinghua.edu.cn/apache/incubator/rocketmq/4.0.0-incubating/rocketmq-all-4.0.0-incubating-bin-release.zip )
+#### 1 Master
 * 启动nameServer
     ```
     nohup sh bin/mqnamesrv &
@@ -38,17 +39,16 @@ tags:
     bin/mqshutdown broker
     bin/mqshutdown namesrv
     ```
-##### 2 Master
+#### 2 Master
     TODO
     
-##### 2 Master - 2 Salve async
+#### 2 Master - 2 Salve async
     TODO
     
-##### 2 Master - 2 Salve sync
+#### 2 Master - 2 Salve sync
 
     TODO
-<!--more-->
-#### 2. 安装控制台
+### 控制台安装
 >控制台使用apache/incubator-rocketmq-externals下的rocketmq-console
 * clone：
     ```
@@ -64,7 +64,7 @@ tags:
     ```
 * 访问控制台：http://localhost:12581
 
-#### 3. 发送消息的默认约定：
+### 发送消息的默认约定：
 * 一个JVM一个MqMessageSender实例，后续视情况是否改为prototype
 * 默认发送方式为同步 - sendMsg(String, String, String, String)
 * client没有必要retry
@@ -88,10 +88,10 @@ tags:
     >* 一个 Producer Group 下包含多个 Producer 实例，可以是多台机器， 也可以是一台机器的多个进程，或者一个进程的多个 Producer 对象。
     >* 一个 Producer Group 可以发送多个 Topic 消息.
 
-#### 4. 消费消息的默认约定：
+### 消费消息的默认约定：
     TODO
-#### 5. 并行消息(多线程多Queue)
+### 并行消息(多线程多Queue)
 
-#### 6. 有序消息(单线程单一ueue)
+### 有序消息(单线程单一ueue)
 
-#### 7. 延迟消息(单线程单一ueue)
+### 延迟消息(单线程单一ueue)

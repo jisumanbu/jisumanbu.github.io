@@ -1636,43 +1636,12 @@
 
       
         
-          <h6 id="contents"><a href="#contents" class="headerlink" title="contents"></a>contents</h6><blockquote>
-<ol>
-<li>部署</li>
-</ol>
-<ul>
+          <h4 id="contents"><a href="#contents" class="headerlink" title="contents"></a>contents</h4><blockquote>
+<h5 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h5><ul>
 <li>1 Master</li>
 <li>2 Master</li>
 <li>2 Master - 2 Salve async</li>
-<li>2 Master - 2 Salve sync</li>
-</ul>
-<ol>
-<li>控制台安装</li>
-<li>发送消息的默认约定</li>
-<li>消费消息的默认约定</li>
-<li>并行消息(多线程多Queue)</li>
-<li>有序消息(单线程单一ueue)</li>
-<li>延迟消息(单线程单一ueue)</li>
-</ol>
-</blockquote>
-<h3 id="1-部署"><a href="#1-部署" class="headerlink" title="1. 部署"></a>1. 部署</h3><blockquote>
-<p>  下载并解压<a href="http://mirrors.tuna.tsinghua.edu.cn/apache/incubator/rocketmq/4.0.0-incubating/rocketmq-all-4.0.0-incubating-bin-release.zip" target="_blank" rel="noopener">rocketmq</a></p>
-</blockquote>
-<h5 id="1-Master"><a href="#1-Master" class="headerlink" title="1 Master"></a>1 Master</h5><ul>
-<li><p>启动nameServer</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup sh bin/mqnamesrv &amp;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动broker</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup sh bin/mqbroker -n localhost:9876 -c conf/broker.conf &amp;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>shutdown</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bin/mqshutdown broker</span><br><span class="line">bin/mqshutdown namesrv</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h5 id="2-Master"><a href="#2-Master" class="headerlink" title="2 Master"></a>2 Master</h5><pre><code>TODO
-</code></pre><h5 id="2-Master-2-Salve-async"><a href="#2-Master-2-Salve-async" class="headerlink" title="2 Master - 2 Salve async"></a>2 Master - 2 Salve async</h5><pre><code>TODO
-</code></pre><h5 id="2-Master-2-Salve-sync"><a href="#2-Master-2-Salve-sync" class="headerlink" title="2 Master - 2 Salve sync"></a>2 Master - 2 Salve sync</h5><pre><code>TODO
-</code></pre>
+<li>2 Master - 2 Salve sync<h5 id="控制台安装"><a href="#控制台安装" class="headerlink" title="控制台安装"></a>控制台安装</h5><h5 id="发送消息的默认约定"><a href="#发送消息的默认约定" class="headerlink" title="发送消息的默认约定"></a>发送消息的默认约定</h5><h5 id="消费消息的默认约定"><a href="#消费消息的默认约定" class="headerlink" title="消费消息的默认约定"></a>消费消息的默认约定</h5><h5 id="并行消息-多线程多Queue"><a href="#并行消息-多线程多Queue" class="headerlink" title="并行消息(多线程多Queue)"></a>并行消息(多线程多Queue)</h5><h5 id="有序消息-单线程单一ueue"><a href="#有序消息-单线程单一ueue" class="headerlink" title="有序消息(单线程单一ueue)"></a>有序消息(单线程单一ueue)</h5><h5 id="延迟消息-单线程单一ueue"><a href="#延迟消息-单线程单一ueue" class="headerlink" title="延迟消息(单线程单一ueue)"></a>延迟消息(单线程单一ueue)</h5>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/rocketMQ-2-installation-and-simple-usages.html#more" rel="contents">

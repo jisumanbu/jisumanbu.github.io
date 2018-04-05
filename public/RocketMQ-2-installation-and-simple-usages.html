@@ -133,18 +133,18 @@
 
   
 
-<meta name="description" content="contents  部署   1 Master 2 Master 2 Master - 2 Salve async 2 Master - 2 Salve sync   控制台安装 发送消息的默认约定 消费消息的默认约定 并行消息(多线程多Queue) 有序消息(单线程单一ueue) 延迟消息(单线程单一ueue)   1. 部署   下载并解压rocketmq  1 Master 启动nameSe">
+<meta name="description" content="contents 部署 1 Master 2 Master 2 Master - 2 Salve async 2 Master - 2 Salve sync控制台安装发送消息的默认约定消费消息的默认约定并行消息(多线程多Queue)有序消息(单线程单一ueue)延迟消息(单线程单一ueue)">
 <meta name="keywords" content="MQ,RocketMQ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RocketMQ二安装与简单实用">
 <meta property="og:url" content="http://www.bbetterman.com/rocketMQ-2-installation-and-simple-usages.html">
 <meta property="og:site_name" content="极速漫步">
-<meta property="og:description" content="contents  部署   1 Master 2 Master 2 Master - 2 Salve async 2 Master - 2 Salve sync   控制台安装 发送消息的默认约定 消费消息的默认约定 并行消息(多线程多Queue) 有序消息(单线程单一ueue) 延迟消息(单线程单一ueue)   1. 部署   下载并解压rocketmq  1 Master 启动nameSe">
+<meta property="og:description" content="contents 部署 1 Master 2 Master 2 Master - 2 Salve async 2 Master - 2 Salve sync控制台安装发送消息的默认约定消费消息的默认约定并行消息(多线程多Queue)有序消息(单线程单一ueue)延迟消息(单线程单一ueue)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-01T08:30:28.000Z">
+<meta property="og:updated_time" content="2018-04-05T02:12:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="RocketMQ二安装与简单实用">
-<meta name="twitter:description" content="contents  部署   1 Master 2 Master 2 Master - 2 Salve async 2 Master - 2 Salve sync   控制台安装 发送消息的默认约定 消费消息的默认约定 并行消息(多线程多Queue) 有序消息(单线程单一ueue) 延迟消息(单线程单一ueue)   1. 部署   下载并解压rocketmq  1 Master 启动nameSe">
+<meta name="twitter:description" content="contents 部署 1 Master 2 Master 2 Master - 2 Salve async 2 Master - 2 Salve sync控制台安装发送消息的默认约定消费消息的默认约定并行消息(多线程多Queue)有序消息(单线程单一ueue)延迟消息(单线程单一ueue)">
 
 
 
@@ -447,29 +447,17 @@
       
 
       
-        <h6 id="contents"><a href="#contents" class="headerlink" title="contents"></a>contents</h6><blockquote>
-<ol>
-<li>部署</li>
-</ol>
-<ul>
+        <h4 id="contents"><a href="#contents" class="headerlink" title="contents"></a>contents</h4><blockquote>
+<h5 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h5><ul>
 <li>1 Master</li>
 <li>2 Master</li>
 <li>2 Master - 2 Salve async</li>
-<li>2 Master - 2 Salve sync</li>
+<li>2 Master - 2 Salve sync<h5 id="控制台安装"><a href="#控制台安装" class="headerlink" title="控制台安装"></a>控制台安装</h5><h5 id="发送消息的默认约定"><a href="#发送消息的默认约定" class="headerlink" title="发送消息的默认约定"></a>发送消息的默认约定</h5><h5 id="消费消息的默认约定"><a href="#消费消息的默认约定" class="headerlink" title="消费消息的默认约定"></a>消费消息的默认约定</h5><h5 id="并行消息-多线程多Queue"><a href="#并行消息-多线程多Queue" class="headerlink" title="并行消息(多线程多Queue)"></a>并行消息(多线程多Queue)</h5><h5 id="有序消息-单线程单一ueue"><a href="#有序消息-单线程单一ueue" class="headerlink" title="有序消息(单线程单一ueue)"></a>有序消息(单线程单一ueue)</h5><h5 id="延迟消息-单线程单一ueue"><a href="#延迟消息-单线程单一ueue" class="headerlink" title="延迟消息(单线程单一ueue)"></a>延迟消息(单线程单一ueue)</h5><a id="more"></a>
+</li>
 </ul>
-<ol>
-<li>控制台安装</li>
-<li>发送消息的默认约定</li>
-<li>消费消息的默认约定</li>
-<li>并行消息(多线程多Queue)</li>
-<li>有序消息(单线程单一ueue)</li>
-<li>延迟消息(单线程单一ueue)</li>
-</ol>
 </blockquote>
-<h3 id="1-部署"><a href="#1-部署" class="headerlink" title="1. 部署"></a>1. 部署</h3><blockquote>
-<p>  下载并解压<a href="http://mirrors.tuna.tsinghua.edu.cn/apache/incubator/rocketmq/4.0.0-incubating/rocketmq-all-4.0.0-incubating-bin-release.zip" target="_blank" rel="noopener">rocketmq</a></p>
-</blockquote>
-<h5 id="1-Master"><a href="#1-Master" class="headerlink" title="1 Master"></a>1 Master</h5><ul>
+<h3 id="部署-1"><a href="#部署-1" class="headerlink" title="部署"></a>部署</h3><pre><code>下载并解压[rocketmq](http://mirrors.tuna.tsinghua.edu.cn/apache/incubator/rocketmq/4.0.0-incubating/rocketmq-all-4.0.0-incubating-bin-release.zip )
+</code></pre><h4 id="1-Master"><a href="#1-Master" class="headerlink" title="1 Master"></a>1 Master</h4><ul>
 <li><p>启动nameServer</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup sh bin/mqnamesrv &amp;</span><br></pre></td></tr></table></figure>
 </li>
@@ -480,11 +468,10 @@
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bin/mqshutdown broker</span><br><span class="line">bin/mqshutdown namesrv</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h5 id="2-Master"><a href="#2-Master" class="headerlink" title="2 Master"></a>2 Master</h5><pre><code>TODO
-</code></pre><h5 id="2-Master-2-Salve-async"><a href="#2-Master-2-Salve-async" class="headerlink" title="2 Master - 2 Salve async"></a>2 Master - 2 Salve async</h5><pre><code>TODO
-</code></pre><h5 id="2-Master-2-Salve-sync"><a href="#2-Master-2-Salve-sync" class="headerlink" title="2 Master - 2 Salve sync"></a>2 Master - 2 Salve sync</h5><pre><code>TODO
-</code></pre><a id="more"></a>
-<h4 id="2-安装控制台"><a href="#2-安装控制台" class="headerlink" title="2. 安装控制台"></a>2. 安装控制台</h4><blockquote>
+<h4 id="2-Master"><a href="#2-Master" class="headerlink" title="2 Master"></a>2 Master</h4><pre><code>TODO
+</code></pre><h4 id="2-Master-2-Salve-async"><a href="#2-Master-2-Salve-async" class="headerlink" title="2 Master - 2 Salve async"></a>2 Master - 2 Salve async</h4><pre><code>TODO
+</code></pre><h4 id="2-Master-2-Salve-sync"><a href="#2-Master-2-Salve-sync" class="headerlink" title="2 Master - 2 Salve sync"></a>2 Master - 2 Salve sync</h4><pre><code>TODO
+</code></pre><h3 id="控制台安装-1"><a href="#控制台安装-1" class="headerlink" title="控制台安装"></a>控制台安装</h3><blockquote>
 <p>控制台使用apache/incubator-rocketmq-externals下的rocketmq-console</p>
 <ul>
 <li>clone：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/apache/incubator-rocketmq-externals.git</span><br></pre></td></tr></table></figure>
@@ -501,7 +488,7 @@
 <li><p>访问控制台：<a href="http://localhost:12581" target="_blank" rel="noopener">http://localhost:12581</a></p>
 </li>
 </ul>
-<h4 id="3-发送消息的默认约定："><a href="#3-发送消息的默认约定：" class="headerlink" title="3. 发送消息的默认约定："></a>3. 发送消息的默认约定：</h4><ul>
+<h3 id="发送消息的默认约定："><a href="#发送消息的默认约定：" class="headerlink" title="发送消息的默认约定："></a>发送消息的默认约定：</h3><ul>
 <li>一个JVM一个MqMessageSender实例，后续视情况是否改为prototype</li>
 <li>默认发送方式为同步 - sendMsg(String, String, String, String)</li>
 <li><p>client没有必要retry</p>
@@ -543,8 +530,8 @@
 </ul>
 </li>
 </ul>
-<h4 id="4-消费消息的默认约定："><a href="#4-消费消息的默认约定：" class="headerlink" title="4. 消费消息的默认约定："></a>4. 消费消息的默认约定：</h4><pre><code>TODO
-</code></pre><h4 id="5-并行消息-多线程多Queue"><a href="#5-并行消息-多线程多Queue" class="headerlink" title="5. 并行消息(多线程多Queue)"></a>5. 并行消息(多线程多Queue)</h4><h4 id="6-有序消息-单线程单一ueue"><a href="#6-有序消息-单线程单一ueue" class="headerlink" title="6. 有序消息(单线程单一ueue)"></a>6. 有序消息(单线程单一ueue)</h4><h4 id="7-延迟消息-单线程单一ueue"><a href="#7-延迟消息-单线程单一ueue" class="headerlink" title="7. 延迟消息(单线程单一ueue)"></a>7. 延迟消息(单线程单一ueue)</h4>
+<h3 id="消费消息的默认约定："><a href="#消费消息的默认约定：" class="headerlink" title="消费消息的默认约定："></a>消费消息的默认约定：</h3><pre><code>TODO
+</code></pre><h3 id="并行消息-多线程多Queue-1"><a href="#并行消息-多线程多Queue-1" class="headerlink" title="并行消息(多线程多Queue)"></a>并行消息(多线程多Queue)</h3><h3 id="有序消息-单线程单一ueue-1"><a href="#有序消息-单线程单一ueue-1" class="headerlink" title="有序消息(单线程单一ueue)"></a>有序消息(单线程单一ueue)</h3><h3 id="延迟消息-单线程单一ueue-1"><a href="#延迟消息-单线程单一ueue-1" class="headerlink" title="延迟消息(单线程单一ueue)"></a>延迟消息(单线程单一ueue)</h3>
       
     </div>
 
@@ -783,7 +770,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#contents"><span class="nav-number">1.</span> <span class="nav-text">contents</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-部署"><span class="nav-number"></span> <span class="nav-text">1. 部署</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-Master"><span class="nav-number"></span> <span class="nav-text">1 Master</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Master"><span class="nav-number"></span> <span class="nav-text">2 Master</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Master-2-Salve-async"><span class="nav-number"></span> <span class="nav-text">2 Master - 2 Salve async</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Master-2-Salve-sync"><span class="nav-number"></span> <span class="nav-text">2 Master - 2 Salve sync</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-安装控制台"><span class="nav-number"></span> <span class="nav-text">2. 安装控制台</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-发送消息的默认约定："><span class="nav-number"></span> <span class="nav-text">3. 发送消息的默认约定：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-消费消息的默认约定："><span class="nav-number"></span> <span class="nav-text">4. 消费消息的默认约定：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-并行消息-多线程多Queue"><span class="nav-number"></span> <span class="nav-text">5. 并行消息(多线程多Queue)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-有序消息-单线程单一ueue"><span class="nav-number"></span> <span class="nav-text">6. 有序消息(单线程单一ueue)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-延迟消息-单线程单一ueue"><span class="nav-number"></span> <span class="nav-text">7. 延迟消息(单线程单一ueue)</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#contents"><span class="nav-number">1.</span> <span class="nav-text">contents</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#部署"><span class="nav-number">1.1.</span> <span class="nav-text">部署</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#控制台安装"><span class="nav-number">1.2.</span> <span class="nav-text">控制台安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#发送消息的默认约定"><span class="nav-number">1.3.</span> <span class="nav-text">发送消息的默认约定</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#消费消息的默认约定"><span class="nav-number">1.4.</span> <span class="nav-text">消费消息的默认约定</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#并行消息-多线程多Queue"><span class="nav-number">1.5.</span> <span class="nav-text">并行消息(多线程多Queue)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#有序消息-单线程单一ueue"><span class="nav-number">1.6.</span> <span class="nav-text">有序消息(单线程单一ueue)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#延迟消息-单线程单一ueue"><span class="nav-number">1.7.</span> <span class="nav-text">延迟消息(单线程单一ueue)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署-1"><span class="nav-number"></span> <span class="nav-text">部署</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Master"><span class="nav-number">1.</span> <span class="nav-text">1 Master</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Master"><span class="nav-number">2.</span> <span class="nav-text">2 Master</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Master-2-Salve-async"><span class="nav-number">3.</span> <span class="nav-text">2 Master - 2 Salve async</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Master-2-Salve-sync"><span class="nav-number">4.</span> <span class="nav-text">2 Master - 2 Salve sync</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制台安装-1"><span class="nav-number"></span> <span class="nav-text">控制台安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发送消息的默认约定："><span class="nav-number"></span> <span class="nav-text">发送消息的默认约定：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#消费消息的默认约定："><span class="nav-number"></span> <span class="nav-text">消费消息的默认约定：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#并行消息-多线程多Queue-1"><span class="nav-number"></span> <span class="nav-text">并行消息(多线程多Queue)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有序消息-单线程单一ueue-1"><span class="nav-number"></span> <span class="nav-text">有序消息(单线程单一ueue)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#延迟消息-单线程单一ueue-1"><span class="nav-number"></span> <span class="nav-text">延迟消息(单线程单一ueue)</span></a></div>
             
 
           </div>
