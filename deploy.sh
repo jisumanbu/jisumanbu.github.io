@@ -5,7 +5,7 @@ hexo d
 
 git add .
 #DATE=`date +%Y-%m-%d.%T`
-git commit -m "页面宽度调节"
+git commit -m "add fancybox lib"
 git push luodifz@www.bbetterman.com:/data/gitLibrary/jisumanbu.git hexo
 
 
