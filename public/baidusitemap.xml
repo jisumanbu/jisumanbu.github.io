@@ -185,7 +185,6 @@
     </url>
 
     
-    
   <url>
     <loc>http://www.bbetterman.com/how-does-a-hashmap-work-in-java.html</loc>
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
@@ -202,6 +201,26 @@
            
              
               <breadCrumb title="DataStructure" url="http://www.bbetterman.com/categories/DataStructure/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.bbetterman.com/redisInAction.html</loc>
+    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>Redis实战（Redis IN ACTION）</title>
+        <pubTime>2018-03-14T16:00:00.000Z</pubTime>
+        
+        <tag>Redis</tag>
+         
+         
+           
+             
+              <breadCrumb title="readNote" url="http://www.bbetterman.com/categories/readNote/"/>
           
         </display>
     </data>
@@ -229,23 +248,4 @@
 
     
     
-  <url>
-    <loc>http://www.bbetterman.com/redisInAction.html</loc>
-    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>Redis实战（Redis IN ACTION）</title>
-        <pubTime>2018-03-14T16:00:00.000Z</pubTime>
-        
-        <tag>Redis</tag>
-         
-         
-           
-             
-              <breadCrumb title="readNote" url="http://www.bbetterman.com/categories/readNote/"/>
-          
-        </display>
-    </data>
-    </url>
-
 </urlset>
