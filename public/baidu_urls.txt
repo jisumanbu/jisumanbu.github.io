@@ -2,9 +2,9 @@ http://www.bbetterman.com/怎样才能生活得更好-奇特的一生读书笔�
 http://www.bbetterman.com/knowledge-hierarchy.html
 http://www.bbetterman.com/rocketMq-in-action.html
 http://www.bbetterman.com/operate-family-like-a-company.html
-http://www.bbetterman.com/redisInAction.html
 http://www.bbetterman.com/how-does-a-hashmap-work-in-java.html
 http://www.bbetterman.com/HTTP_HTTPS_Token.html
+http://www.bbetterman.com/redisInAction.html
 http://www.bbetterman.com/rocketMQ-2-installation-and-simple-usages.html
 http://www.bbetterman.com/rocketMQ-1-concepts.html
 http://www.bbetterman.com/mq-why-and-where-to-use-it.html

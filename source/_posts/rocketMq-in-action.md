@@ -23,7 +23,7 @@ tags:
     分为ConcurrentlyConsumer和OrderlyConsumer。
  * 有序消息 -> 继承OrderlyConsumer   
  * 非有序消息 -> 可认为支持多线程, 继承ConcurrentlyConsumer
-### 自动过滤重复消息，避免重复消费问题
+## 自动过滤重复消息，避免重复消费问题
     具体实现：AbstractConsumer.isAlreadyConsumed(...)方法。
  * 利用redisson的RSetCache类的add特性来判断消息是否已经消费过了    
  * true if value has been added. false if value already been in collection.
@@ -31,3 +31,5 @@ tags:
     isAlreadyConsumed = !FedisClient.getClient().getSetCache(hashKeyOfRedis).add(messageKey, 1L, TimeUnit.DAYS);
     ```
     > 注意：FedisClient为未实现单例，用户得自行修复以上代码。
+    
+<!-- more --> 

@@ -5,7 +5,7 @@ hexo d
 
 git add .
 #DATE=`date +%Y-%m-%d.%T`
-git commit -m "怎样才能生活得更好-奇特的一生读书笔记"
+git commit -m "不显示全文，只显示预览"
 git push luodifz@www.bbetterman.com:/data/gitLibrary/jisumanbu.git hexo
 
 

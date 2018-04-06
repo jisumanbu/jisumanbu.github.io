@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.bbetterman.com/rocketMq-in-action.html</loc>
+    
+    <lastmod>2018-04-06T06:19:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.bbetterman.com/knowledge-hierarchy.html</loc>
+    
+    <lastmod>2018-04-06T06:17:54.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.bbetterman.com/%E6%80%8E%E6%A0%B7%E6%89%8D%E8%83%BD%E7%94%9F%E6%B4%BB%E5%BE%97%E6%9B%B4%E5%A5%BD-%E5%A5%87%E7%89%B9%E7%9A%84%E4%B8%80%E7%94%9F%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0.html</loc>
     
-    <lastmod>2018-04-06T05:44:16.000Z</lastmod>
+    <lastmod>2018-04-06T06:17:35.000Z</lastmod>
     
   </url>
   
@@ -16,14 +30,7 @@
   </url>
   
   <url>
-    <loc>http://www.bbetterman.com/rocketMq-in-action.html</loc>
-    
-    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.bbetterman.com/mq-why-and-where-to-use-it.html</loc>
+    <loc>http://www.bbetterman.com/rocketMQ-1-concepts.html</loc>
     
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
     
@@ -37,7 +44,7 @@
   </url>
   
   <url>
-    <loc>http://www.bbetterman.com/operate-family-like-a-company.html</loc>
+    <loc>http://www.bbetterman.com/HTTP_HTTPS_Token.html</loc>
     
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
     
@@ -51,7 +58,7 @@
   </url>
   
   <url>
-    <loc>http://www.bbetterman.com/rocketMQ-1-concepts.html</loc>
+    <loc>http://www.bbetterman.com/mq-why-and-where-to-use-it.html</loc>
     
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
     
@@ -65,14 +72,7 @@
   </url>
   
   <url>
-    <loc>http://www.bbetterman.com/HTTP_HTTPS_Token.html</loc>
-    
-    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.bbetterman.com/knowledge-hierarchy.html</loc>
+    <loc>http://www.bbetterman.com/operate-family-like-a-company.html</loc>
     
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
     

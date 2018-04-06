@@ -408,7 +408,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">411</span>
+                <span title="字数统计">412</span>
               
 
               
@@ -443,22 +443,15 @@
 
       
         
-          
-            <p>《奇特的一生》以个人传记的方式讲述了柳比歇夫的时间管理法。按照作者的逻辑去读这本书的话，很难抓住重点，<br>正如作者自己所言”作者仍然不能做出最后的结论，给读者出点什么主意”。<br>比如，全书的中心是”怎样才能生活的更好”，但是全文又都是在写柳比歇夫的”时间统计法”，他们之间的逻辑是什么样的？<br>我们有必要或如何将时间统计法应用到我们的生活中？</p>
-<p>“时间统计法”本质上是时间管理的一种方式和工具，它服务于目标管理，帮助我们更好的完成我们的人生目标。<br>下面本文就将以”目标驱动”的逻辑来重新梳理《奇特的一生》，弄明白”怎样才能生活的更好”。</p>
-<h3 id="怎样算作生活的更好"><a href="#怎样算作生活的更好" class="headerlink" title="怎样算作生活的更好"></a>怎样算作生活的更好</h3><pre><code>以主人公柳比歇夫为例，清楚自己活着的目的，并终生为自己的目标奋斗，最终活出了个&quot;令人惊叹的一生&quot;。
-</code></pre><h4 id="魅力表现"><a href="#魅力表现" class="headerlink" title="魅力表现"></a>魅力表现</h4><blockquote>
-</blockquote>
-<ul>
-<li>目标明确！知道活着是为了什么，有什么目的<blockquote>
-<p>仿佛有什么崇高的目的，甚至可能领悟了存在的意义。<br> 作为榜样，教人应当怎样生活、怎样思考</p>
-</blockquote>
-</li>
-<li></li>
-</ul>
-<h3 id="本文导图"><a href="#本文导图" class="headerlink" title="本文导图"></a>本文导图</h3><p><img src="/images/怎样才能生活得更好.pdf" alt="奇特的一生"></p>
-
-          
+          <p>《奇特的一生》以个人传记的方式讲述了柳比歇夫的时间管理法。按照作者的逻辑去读这本书的话，很难抓住重点，<br>正如作者自己所言”作者仍然不能做出最后的结论，给读者出点什么主意”。<br>比如，全书的中心是”怎样才能生活的更好”，但是全文又都是在写柳比歇夫的”时间统计法”，他们之间的逻辑是什么样的？<br>我们有必要或如何将时间统计法应用到我们的生活中？</p>
+<p>“时间统计法”本质上是时间管理的一种方式和工具，它服务于目标管理，帮助我们更好的完成我们的人生目标。<br>下面本文就将以”目标驱动”的逻辑来重新梳理《奇特的一生》，弄明白”怎样才能生活的更好”。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/怎样才能生活得更好-奇特的一生读书笔记.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -590,7 +583,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">1</span>
+                <span title="字数统计">2</span>
               
 
               
@@ -625,10 +618,14 @@
 
       
         
-          
-            <p><img src="/images/知识体系总览.pdf" alt="图解HTTPS"></p>
-
-          
+          <p><img src="/images/知识体系总览.pdf" alt="图解HTTPS"><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/knowledge-hierarchy.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -767,7 +764,7 @@
                 
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="字数统计">640</span>
+                <span title="字数统计">641</span>
               
 
               
@@ -802,8 +799,7 @@
 
       
         
-          
-            <pre><code>将RocketMQ的producer和listner封装成sender和consumer，力求简单实用。
+          <pre><code>将RocketMQ的producer和listner封装成sender和consumer，力求简单实用。
 源码：https://github.com/jisumanbu/RocketMqInAction.git
 </code></pre><h2 id="发送消息"><a href="#发送消息" class="headerlink" title="发送消息"></a>发送消息</h2><pre><code>封装类为：MqMessageSender，支持以下多种发送方式及异常处理
 </code></pre><ul>
@@ -818,7 +814,7 @@
 <h2 id="接收并消费消息"><a href="#接收并消费消息" class="headerlink" title="接收并消费消息"></a>接收并消费消息</h2><pre><code>分为ConcurrentlyConsumer和OrderlyConsumer。
 </code></pre><ul>
 <li>有序消息 -&gt; 继承OrderlyConsumer   </li>
-<li>非有序消息 -&gt; 可认为支持多线程, 继承ConcurrentlyConsumer<h3 id="自动过滤重复消息，避免重复消费问题"><a href="#自动过滤重复消息，避免重复消费问题" class="headerlink" title="自动过滤重复消息，避免重复消费问题"></a>自动过滤重复消息，避免重复消费问题</h3> 具体实现：AbstractConsumer.isAlreadyConsumed(…)方法。</li>
+<li>非有序消息 -&gt; 可认为支持多线程, 继承ConcurrentlyConsumer<h2 id="自动过滤重复消息，避免重复消费问题"><a href="#自动过滤重复消息，避免重复消费问题" class="headerlink" title="自动过滤重复消息，避免重复消费问题"></a>自动过滤重复消息，避免重复消费问题</h2> 具体实现：AbstractConsumer.isAlreadyConsumed(…)方法。</li>
 <li>利用redisson的RSetCache类的add特性来判断消息是否已经消费过了    </li>
 <li><p>true if value has been added. false if value already been in collection.</p>
  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">isAlreadyConsumed = !FedisClient.getClient().getSetCache(hashKeyOfRedis).add(messageKey, <span class="number">1L</span>, TimeUnit.DAYS);</span><br></pre></td></tr></table></figure>
@@ -827,8 +823,13 @@
 </blockquote>
 </li>
 </ul>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/rocketMq-in-action.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -996,259 +997,17 @@
       
         
           
-            <h2 id="想法的产生"><a href="#想法的产生" class="headerlink" title="想法的产生"></a>想法的产生</h2><p>16年看着《管理的实践》却不知道何为公司；认识老婆后便萌生了以企业的方式经营家庭的想法。想着”以企业的方式经营家庭”可以</p>
-<blockquote>
-<ul>
-<li>促使我去了解”企业”到底是什么，为以后的创业做铺垫</li>
-<li>目标管理的实践：家庭目标 &amp; 个人目标的平衡</li>
-<li>从一个人变成了一家人，从而必须以组织的角度重新审视”家”</li>
-<li>摆脱浑浑噩噩</li>
-</ul>
-</blockquote>
-<p>最近又重新饱受焦虑的困扰，所以迫使着重新梳理了下目标；再加上和老婆生活上的小摩擦让我坚定了这一想法，决定立即实施。</p>
-<h2 id="家庭企业的建立"><a href="#家庭企业的建立" class="headerlink" title="家庭企业的建立"></a>家庭企业的建立</h2><h3 id="家庭适用有限合伙企业"><a href="#家庭适用有限合伙企业" class="headerlink" title="家庭适用有限合伙企业"></a>家庭适用<strong>有限合伙企业</strong></h3><pre><code>从下图中可以很快发现，&quot;有限合伙企业&quot;和&quot;家庭&quot;最贴切（夫妻双方为普通合伙人，父母孩子皆为有限合伙人）。
-</code></pre><p> <img src="/images/企业类型.png" alt="企业类型"></p>
-<h3 id="有限合伙企业成员的角色、权利、义务"><a href="#有限合伙企业成员的角色、权利、义务" class="headerlink" title="有限合伙企业成员的角色、权利、义务"></a>有限合伙企业成员的角色、权利、义务</h3><ul>
-<li>夫妻，普通合伙人，以预算的方式分配企业所得，承担<strong>无限连带责任</strong></li>
-<li>父母，有限合伙人，参与固定分红以及分享一定应急资金，承担有限责任（带孩子等）</li>
-<li>孩子，战略性投资项目（因为没有投入和不承担责任所以不应作为合伙人而存在），享受预算优先权，不承担任何责任</li>
-</ul>
-<h3 id="合伙协议，按企业法应包含如下内容："><a href="#合伙协议，按企业法应包含如下内容：" class="headerlink" title="合伙协议，按企业法应包含如下内容："></a><strong>合伙协议</strong>，按企业法应包含如下内容：</h3><ol>
-<li>普通合伙人和有限合伙人的姓名或者名称、住所；<blockquote>
-<p>略</p>
-</blockquote>
-</li>
-<li>执行事务合伙人应具备的条件和选择程序；<blockquote>
-<p>夫妻两人皆为执行事务合伙人，投票权完全相同</p>
-</blockquote>
-</li>
-<li>执行事务合伙人权限与违约处理办法；<blockquote>
-<ul>
-<li>没有特别附加权限，等同普通合伙人权益；</li>
-<li><del>违约？ 什么约？</del></li>
-</ul>
-</blockquote>
-</li>
-<li>执行事务合伙人的除名条件和更换程序；<blockquote>
-<p>不会更换，除非散货</p>
-</blockquote>
-</li>
-<li>有限合伙人入伙、退伙的条件、程序以及相关责任；<blockquote>
-<p>参照婚姻法中离婚的相关条款</p>
-</blockquote>
-</li>
-<li>有限合伙人和普通合伙人相互转变程序。<blockquote>
-<p>合伙人角色不会发生变化</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="如何经营家庭有限合伙企业"><a href="#如何经营家庭有限合伙企业" class="headerlink" title="如何经营家庭有限合伙企业"></a>如何经营家庭有限合伙企业</h2><h3 id="目标驱动"><a href="#目标驱动" class="headerlink" title="目标驱动"></a>目标驱动</h3><pre><code>以目标驱动企业日常运营
-</code></pre><ul>
-<li>目标设定<br> <img src="/images/目标.jpeg" alt="目标"></li>
-<li>企业目标和个人目标的平衡<blockquote>
-<p>1.<br>2. </p>
-</blockquote>
-</li>
-<li>根据目标推导出的个人计划<blockquote>
-<ol>
-<li></li>
-<li></li>
-</ol>
-</blockquote>
-</li>
-</ul>
-<h3 id="预算式财政（待详细）"><a href="#预算式财政（待详细）" class="headerlink" title="预算式财政（待详细）"></a>预算式财政（待详细）</h3><ul>
-<li>保险</li>
-<li>风险资金</li>
-<li>房租</li>
-<li>老婆护肤品</li>
-<li>老婆衣服</li>
-<li>生活费</li>
-<li>旅游</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
+          想法的产生16年看着《管理的实践》却不知道何为公司；认识老婆后便萌生了以企业的方式经营家庭的想法。想着”以企业的方式经营家庭”可以
 
 
-    
-      
+促使我去了解”企业”到底是什么，为以后的创业做铺垫
+目标管理的实践：家庭目标 &amp; 个人目标的平衡
+从一个人变成了一家人，从而必须以组织的角度重新审视”家”
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.bbetterman.com/redisInAction.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jisumanbu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/422.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="极速漫步">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/redisInAction.html" itemprop="url">Redis实战（Redis IN ACTION）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-15T00:00:00+08:00">2018-03-15</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/readNote/" itemprop="url" rel="index"><span itemprop="name">readNote</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">1.2k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">0:01</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="第1章-初识Redis"><a href="#第1章-初识Redis" class="headerlink" title="第1章 初识Redis"></a>第1章 初识Redis</h4><ul>
-<li><p>Redis的优点</p>
-<blockquote>
-<p>比关系型数据库更效率、更易用；比内存数据库有数据结构上的优势</p>
-</blockquote>
-<ul>
-<li>高性能内存数据库，但支持持久化《RDB, AOF》</li>
-<li>5种数据结构 《string, List, set, hash, zset</li>
-<li>第6种数据结构：pub/sub</li>
-<li>简单事务</li>
-<li>过期机制</li>
-<li>主从复制 -&gt; 扩展读性能，故障转移
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/redisInAction.html#more" rel="contents">
+            <a class="btn" href="/operate-family-like-a-company.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1643,6 +1402,191 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/HTTP_HTTPS_Token.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.bbetterman.com/redisInAction.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jisumanbu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/422.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="极速漫步">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/redisInAction.html" itemprop="url">Redis实战（Redis IN ACTION）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-15T00:00:00+08:00">2018-03-15</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/readNote/" itemprop="url" rel="index"><span itemprop="name">readNote</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">1.2k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">0:01</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="第1章-初识Redis"><a href="#第1章-初识Redis" class="headerlink" title="第1章 初识Redis"></a>第1章 初识Redis</h4><ul>
+<li><p>Redis的优点</p>
+<blockquote>
+<p>比关系型数据库更效率、更易用；比内存数据库有数据结构上的优势</p>
+</blockquote>
+<ul>
+<li>高性能内存数据库，但支持持久化《RDB, AOF》</li>
+<li>5种数据结构 《string, List, set, hash, zset</li>
+<li>第6种数据结构：pub/sub</li>
+<li>简单事务</li>
+<li>过期机制</li>
+<li>主从复制 -&gt; 扩展读性能，故障转移
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/redisInAction.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
