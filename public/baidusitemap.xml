@@ -94,6 +94,26 @@
 
     
   <url>
+    <loc>http://www.bbetterman.com/redisInAction.html</loc>
+    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>Redis实战（Redis IN ACTION）</title>
+        <pubTime>2018-03-14T16:00:00.000Z</pubTime>
+        
+        <tag>Redis</tag>
+         
+         
+           
+             
+              <breadCrumb title="readNote" url="http://www.bbetterman.com/categories/readNote/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.bbetterman.com/rocketMQ-1-concepts.html</loc>
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
     <data>
@@ -119,44 +139,19 @@
 
     
   <url>
-    <loc>http://www.bbetterman.com/operate-family-like-a-company.html</loc>
+    <loc>http://www.bbetterman.com/mq-why-and-where-to-use-it.html</loc>
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
     <data>
         <display>
-        <title>以企业的方式经营家庭</title>
-        <pubTime>2018-03-17T09:16:15.000Z</pubTime>
+        <title>为什么需要消息中间件 以及 消息中间件的使用场景</title>
+        <pubTime>2018-03-12T16:00:00.000Z</pubTime>
         
-        <tag>strategy</tag>
+        <tag>MQ</tag>
          
          
            
              
-              <breadCrumb title="BetterLife" url="http://www.bbetterman.com/categories/BetterLife/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.bbetterman.com/HTTP_HTTPS_Token.html</loc>
-    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>HTTP、HTTPS、TOKEN的比较 以及 如何选择</title>
-        <pubTime>2018-03-14T16:00:00.000Z</pubTime>
-        
-        <tag>HTTPS</tag>
-         
-        <tag>JWT</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="http://www.bbetterman.com/categories/Web/"/>
-          
-             
-              <breadCrumb title="Security" url="http://www.bbetterman.com/categories/Web/Security/"/>
+              <breadCrumb title="MQ" url="http://www.bbetterman.com/categories/MQ/"/>
           
         </display>
     </data>
@@ -185,6 +180,32 @@
     </url>
 
     
+    
+  <url>
+    <loc>http://www.bbetterman.com/HTTP_HTTPS_Token.html</loc>
+    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>HTTP、HTTPS、TOKEN的比较 以及 如何选择</title>
+        <pubTime>2018-03-14T16:00:00.000Z</pubTime>
+        
+        <tag>HTTPS</tag>
+         
+        <tag>JWT</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="http://www.bbetterman.com/categories/Web/"/>
+          
+             
+              <breadCrumb title="Security" url="http://www.bbetterman.com/categories/Web/Security/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.bbetterman.com/how-does-a-hashmap-work-in-java.html</loc>
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
@@ -207,45 +228,24 @@
     </url>
 
     
+    
   <url>
-    <loc>http://www.bbetterman.com/redisInAction.html</loc>
+    <loc>http://www.bbetterman.com/operate-family-like-a-company.html</loc>
     <lastmod>2018-04-01T08:30:28.000Z</lastmod>
     <data>
         <display>
-        <title>Redis实战（Redis IN ACTION）</title>
-        <pubTime>2018-03-14T16:00:00.000Z</pubTime>
+        <title>以企业的方式经营家庭</title>
+        <pubTime>2018-03-17T09:16:15.000Z</pubTime>
         
-        <tag>Redis</tag>
+        <tag>strategy</tag>
          
          
            
              
-              <breadCrumb title="readNote" url="http://www.bbetterman.com/categories/readNote/"/>
+              <breadCrumb title="BetterLife" url="http://www.bbetterman.com/categories/BetterLife/"/>
           
         </display>
     </data>
     </url>
 
-    
-  <url>
-    <loc>http://www.bbetterman.com/mq-why-and-where-to-use-it.html</loc>
-    <lastmod>2018-04-01T08:30:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>为什么需要消息中间件 以及 消息中间件的使用场景</title>
-        <pubTime>2018-03-12T16:00:00.000Z</pubTime>
-        
-        <tag>MQ</tag>
-         
-         
-           
-             
-              <breadCrumb title="MQ" url="http://www.bbetterman.com/categories/MQ/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
 </urlset>
