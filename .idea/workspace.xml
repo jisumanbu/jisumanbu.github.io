@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52ab6b47-31eb-4707-8390-1c075c877fbb" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/next/source/lib/fancybox/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/next/source/lib/fancybox/.gitattributes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/next/source/lib/fancybox/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/next/source/lib/fancybox/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/next/source/lib/fancybox/source/jquery.fancybox.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/next/source/lib/fancybox/source/jquery.fancybox.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/next/source/lib/fancybox/source/jquery.fancybox.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/next/source/lib/fancybox/source/jquery.fancybox.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/next/source/lib/fancybox/source/jquery.fancybox.pack.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/themes/next/source/lib/fancybox" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.json" afterPath="$PROJECT_DIR$/db.json" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -741,7 +749,7 @@
       <workItem from="1522737486665" duration="473000" />
       <workItem from="1522738162318" duration="1025000" />
       <workItem from="1522821005893" duration="3666000" />
-      <workItem from="1522939464103" duration="9912000" />
+      <workItem from="1522939464103" duration="10047000" />
     </task>
     <task id="LOCAL-00001" summary="文章动画效果关闭">
       <created>1522992625236</created>
@@ -789,7 +797,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17261000" />
+    <option name="totallyTimeSpent" value="17396000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
