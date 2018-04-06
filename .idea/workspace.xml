@@ -2,9 +2,317 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52ab6b47-31eb-4707-8390-1c075c877fbb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.deploy_git" afterPath="$PROJECT_DIR$/.deploy_git" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/.bin/he" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/.bin/html-to-text" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/he/LICENSE-MIT.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/he/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/he/bin/he" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/he/he.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/he/man/he.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/he/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/.eslintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/.github/stale.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/.jscsrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/appveyor.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/coverage/coverage.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/coverage/lcov-report/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/coverage/lcov-report/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/coverage/lcov-report/lib/helper.js.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/coverage/lcov-report/lib/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/coverage/lcov-report/prettify.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/coverage/lcov-report/prettify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/coverage/lcov-report/sort-arrow-sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/coverage/lcov-report/sorter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/coverage/lcov.info" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/lib/helper.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-symbols-count-time/test/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-wordcount/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-wordcount/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hexo-wordcount/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/LICENSE-MIT" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/bin/cli.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/example/html-to-text.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/example/test.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/lib/formatter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/lib/helper.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/lib/html-to-text.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/test/html-to-text.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/test/test-address-dup.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/test/test-address.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/test/test-any-order.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/test/test-first-element.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/test/test.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/html-to-text/test/test.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/CHANGELOG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/json2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/lib/htmlparser.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/lib/htmlparser.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/lib/node-htmlparser.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/lib/node-htmlparser.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/runtests.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/runtests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/runtests.min.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/runtests.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/01-basic.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/02-single_tag_1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/03-single_tag_2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/04-unescaped_in_script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/05-tags_in_comment.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/06-comment_in_script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/07-unescaped_in_style.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/08-extra_spaces_in_tag.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/09-unquoted_attrib.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/10-singular_attribute.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/11-text_outside_tags.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/12-text_only.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/13-comment_in_text.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/14-comment_in_text_in_script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/15-non-verbose.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/16-ignore_whitespace.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/17-xml_namespace.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/18-enforce_empty_tags.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/19-ignore_empty_tags.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/20-rss.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/21-atom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/tests/22-position_data.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/htmlparser/utils_example.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/match-words/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/match-words/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/match-words/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/match-words/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/Gruntfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/component.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/karma-ci.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/be-nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/chs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/cs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/da-dk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/de-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/en-gb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/en-za.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/es-ES.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/et.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/fi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/fr-CA.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/fr-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/ja.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/lv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/nl-nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/no.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/pt-pt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/ru-UA.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/th.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/languages/uk-UA.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/be-nl.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/chs.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/cs.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/da-dk.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/de-ch.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/de.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/en-gb.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/en-za.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/es-ES.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/es.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/et.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/fi.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/fr-CA.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/fr-ch.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/fr.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/hu.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/it.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/ja.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/lv.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/nl-nl.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/no.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/pl.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/pt-br.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/pt-pt.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/ru-UA.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/ru.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/sk.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/th.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/tr.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/languages/uk-UA.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/min/numeral.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/numeral.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/be-nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/chs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/cs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/da-dk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/de-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/en-gb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/en-za.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/es-ES.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/et.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/fi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/fr-CA.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/fr-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/ja.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/lv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/nl-nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/no.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/pt-pt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/ru-UA.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/th.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/languages/uk-UA.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/numeral/format.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/numeral/manipulate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/numeral/misc.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/numeral/unformat.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/numeral/tests/numeral/validate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/.eslintignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/.eslintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/CHANGELOG.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/CONTRIBUTING.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/README.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/camelize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/capitalize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/chars.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/chop.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/classify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/clean.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/cleanDiacritics.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/component.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/count.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/dasherize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/decapitalize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/dedent.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/dist/underscore.string.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/dist/underscore.string.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/endsWith.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/escapeHTML.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/exports.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/helper/adjacent.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/helper/defaultToWhiteSpace.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/helper/escapeChars.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/helper/escapeRegExp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/helper/htmlEntities.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/helper/makeString.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/helper/strRepeat.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/helper/toPositive.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/humanize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/include.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/insert.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/isBlank.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/join.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/levenshtein.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/lines.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/lpad.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/lrpad.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/ltrim.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/map.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/meteor-post.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/meteor-pre.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/naturalCmp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/numberFormat.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/package.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/pad.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/pred.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/prune.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/quote.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/repeat.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/replaceAll.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/reverse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/rpad.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/rtrim.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/slugify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/splice.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/sprintf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/startsWith.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/strLeft.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/strLeftBack.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/strRight.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/strRightBack.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/stripTags.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/succ.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/surround.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/swapCase.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/titleize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/toBoolean.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/toNumber.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/toSentence.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/toSentenceSerial.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/trim.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/truncate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/underscored.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/unescapeHTML.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/unquote.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/vsprintf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/words.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/wrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore/underscore-min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore/underscore-min.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore/underscore.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/word-regex/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/word-regex/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/word-regex/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/word-regex/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/wordcount/.gitattributes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/wordcount/.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/wordcount/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/wordcount/.verb.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/wordcount/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/wordcount/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/wordcount/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/wordcount/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/wordcount/test.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.json" afterPath="$PROJECT_DIR$/db.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/HTTP_HTTPS_Token.html" afterPath="$PROJECT_DIR$/public/HTTP_HTTPS_Token.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/RocketMQ-1-concepts.html" afterPath="$PROJECT_DIR$/public/RocketMQ-1-concepts.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/RocketMQ-2-installation-and-simple-usages.html" afterPath="$PROJECT_DIR$/public/RocketMQ-2-installation-and-simple-usages.html" />
@@ -15,7 +323,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/archives/2018/page/2/index.html" afterPath="$PROJECT_DIR$/public/archives/2018/page/2/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/archives/index.html" afterPath="$PROJECT_DIR$/public/archives/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/archives/page/2/index.html" afterPath="$PROJECT_DIR$/public/archives/page/2/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/baidu_urls.txt" afterPath="$PROJECT_DIR$/public/baidu_urls.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/baidusitemap.xml" afterPath="$PROJECT_DIR$/public/baidusitemap.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/categories/BetterLife/index.html" afterPath="$PROJECT_DIR$/public/categories/BetterLife/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/categories/DataStructure/index.html" afterPath="$PROJECT_DIR$/public/categories/DataStructure/index.html" />
@@ -36,7 +343,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/operate-family-like-a-company.html" afterPath="$PROJECT_DIR$/public/operate-family-like-a-company.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/page/2/index.html" afterPath="$PROJECT_DIR$/public/page/2/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/redisInAction.html" afterPath="$PROJECT_DIR$/public/redisInAction.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/search.xml" afterPath="$PROJECT_DIR$/public/search.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/sitemap.xml" afterPath="$PROJECT_DIR$/public/sitemap.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tags/DataStructure/index.html" afterPath="$PROJECT_DIR$/public/tags/DataStructure/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tags/HTTPS/index.html" afterPath="$PROJECT_DIR$/public/tags/HTTPS/index.html" />
@@ -79,7 +385,7 @@
         <entry file="file://$PROJECT_DIR$/deploy.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -88,8 +394,18 @@
       <file leaf-file-name="_config.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/next/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="263" column="16" lean-forward="false" selection-start-line="263" selection-start-column="7" selection-end-line="263" selection-end-column="16" />
+            <state relative-caret-position="214">
+              <caret line="263" column="26" lean-forward="false" selection-start-line="263" selection-start-column="26" selection-end-line="263" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="362">
+              <caret line="90" column="13" lean-forward="false" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -99,10 +415,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>scrollpercent</find>
-      <find>@media (max-width: 767px)</find>
-      <find>mist</find>
-      <find>_layout.styl</find>
       <find>max_content_width</find>
       <find>auto_excerpt</find>
       <find>passage_end_tag</find>
@@ -128,7 +440,11 @@
       <find>leancloud_visitors</find>
       <find>views</find>
       <find>post_wordcount</find>
+      <find>totalcount(site)</find>
+      <find>totalcount(site</find>
+      <find>totalcount</find>
       <find>wordcount</find>
+      <find>symbols_count_time</find>
     </findStrings>
     <replaceStrings>
       <replace>######</replace>
@@ -160,8 +476,8 @@
         <option value="$PROJECT_DIR$/themes/next/source/css/_common/components/post/post-expand.styl" />
         <option value="$PROJECT_DIR$/themes/next/source/css/_variables/base.styl" />
         <option value="$PROJECT_DIR$/themes/next/source/css/_schemes/Pisces/_layout.styl" />
-        <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/deploy.sh" />
+        <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/themes/next/_config.yml" />
       </list>
     </option>
@@ -209,24 +525,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hexoWorkspace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hexoWorkspace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hexoWorkspace" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="next" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -839,7 +1137,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21771000" />
+    <option name="totallyTimeSpent" value="22548000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -864,9 +1162,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26752505" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1389,26 +1687,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
+    <entry file="file://$PROJECT_DIR$/deploy.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="110" column="14" lean-forward="false" selection-start-line="110" selection-start-column="14" selection-end-line="110" selection-end-column="14" />
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deploy.sh">
+    <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="362">
+          <caret line="90" column="13" lean-forward="false" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/next/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="263" column="16" lean-forward="false" selection-start-line="263" selection-start-column="7" selection-end-line="263" selection-end-column="16" />
+        <state relative-caret-position="214">
+          <caret line="263" column="26" lean-forward="false" selection-start-line="263" selection-start-column="26" selection-end-line="263" selection-end-column="26" />
           <folding />
         </state>
       </provider>
