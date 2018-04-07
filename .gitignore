@@ -5,3 +5,4 @@ nohup.out
 *.iml
 db.json
 public
+.idea
