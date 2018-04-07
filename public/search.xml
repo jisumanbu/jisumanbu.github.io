@@ -57,6 +57,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Redis实战（Redis IN ACTION）]]></title>
+    <url>%2FredisInAction.html</url>
+    <content type="text"><![CDATA[第1章 初识Redis Redis的优点 比关系型数据库更效率、更易用；比内存数据库有数据结构上的优势 高性能内存数据库，但支持持久化《RDB, AOF》 5种数据结构 《string, List, set, hash, zset 第6种数据结构：pub/sub 简单事务 过期机制 主从复制 -&gt; 扩展读性能，故障转移 第4章 数据安全与性能保障 4.1 持久化选项 快照持久化&lt;SNAPSHOT/RDB、AOF&gt; 从服务器的复制启动过程&lt;第一次同步&gt; SNAPSHOT/RDB &lt;高效恢复数据，但是有停顿，丢数据&gt; BGSAVE fork子进程 -&gt; 停顿 &lt;生成子进程的过程会阻塞父进程&gt; 可关闭自动保存，手动触发 内存不足时 -&gt; 使用虚拟内存 master内存使用率应在50%~65% SAVE 没有子进程，故比BGSAVE快 数据完整性 可承受丢失多长时间的数据？ save 60 1000 丢失了那些数据？ -&gt; process_logs() 保证日志的处理结果和处理进度总是同时被记录到快照文件里面 AOF 不丢数据，无停顿，但恢复慢，日志体积大 主从写更新 同步频率&lt;appendfsync选项&gt; always&lt;每次写都触发同步，每次只写入一个命令&gt; -&gt; 最慢 everysec&lt;每秒触发一次同步&gt; -&gt; 推荐 no&lt;操作系统自动决定同步时机&gt; -&gt; 不推荐 重写/压缩AOF文件 BGREWRITEAOF -&gt; 工作机制同BGSAVE，停顿 何时执行BGREWRITEAOF？ auto-aof-rewrite-percentage auto-aof-rewirte-min-size 4.2 复制(replication) 主从复制 &lt;不支持多主复制&gt; 复制的启动过程 主从链 复制中间层 -&gt; 分担主服务器的复制工作 检查硬盘写入 conn.info()…. 4.3 处理系统故障 验证AOF文件 可修复 验证快照文件 不可修复 恢复前需验证快照文件&lt;SHA1/SHA256&gt; 更换故障主服务器、Redis Sentinel的故障转移 4.4 事务 watch + retry 如果数据被更改，收到watch的通知，然后重试 流水线（pipelining）方式：pipe.multi + pipe.execute 一次性发送多个命令，然后等待所有回复出现&lt;如果执行过程中，接到watchError则失败&gt; 4.5 非事务型流水线 pipe = conn.pipeline(false) 《单纯的把多个命令打包，一起发送》]]></content>
+      <categories>
+        <category>readNote</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[HTTP、HTTPS、TOKEN的比较 以及 如何选择]]></title>
     <url>%2FHTTP_HTTPS_Token.html</url>
     <content type="text"><![CDATA[HTTP与HTTPS HTTP的缺点 及 解决方案 通信使用明文(不加密)，内容可能被窃听 加密 不验证通信方的身份，因此有可能遭遇伪装（假的server或client） 证书 （支持双向验证，但通常只验证服务端.）SSL客户端的身份验证是可选的，由SSL服务器决定是否验证SSL客户端的身份 无法证明报文的完整性，所以有可能已遭篡改 基于散列值校验（MD5 / SHA-1）等等的完整性校验方案 HTTPS可以完美解决以上问题 HTTP + 加密 + 认证 + 完整性保护 = HTTPS 请求包可以被截获，但无法解密读取 对于HTTPS不做赘述，下面仅附图一张 既然HTTPS那么安全可靠，那为何所有的网站不一直使用HTTPS ？ HTTPS比HTTP慢2到100倍 通信慢 TCP/IP之上还需要SSL通信 消耗更多的CPU和内存 客户端和服务端都必须加密解密运算， 证书的开销 HTTP + TOKEN：每次请请求都携带经过加密且被签名的token 无状态，可快速验证用户的有效性 加密，防止token被读取篡改 但是第三方可以用截取到的token伪造请求，所以client有被劫持的风险；签名和设置有效期可以解决 GET等非敏感请求 设置token的有效期”per session cookies, and per request” – 防CSRF 对于GET，token的签名包含url，确保token和URL是对应的没被更改的 – 请求顶多被窃听 例如Get请求时，将parameters加入到签名里，从而防止被篡改；但仍然可以被监听. POST请求则直接对请求体做MD5计算，将MD5值加入签名. POST等敏感请求，用HTTPS 最终选择 首选HTTPS，如果不用考虑性能和money的话 认证可随意选择，用户名密码或者简单token HTTP + token，请求体、相应体有被监听的风险 提前约定secret、加密方式等 每次请求都生成唯一的经过加密和签名的token 将md5(requestContent/parameter)作为签名的一部分，避免劫持 上面两点无法防止伪装，token可以被窃取，从而有被劫持.可以将md5(requestContent/parameter)作为签名的一部分，避免劫持，顶多有被监听的风险，因为信息不明感，从而可忽略 HTTP和HTTPS组合使用 非敏感信息使用HTTP + token的认证方式 只有在接触敏感信息时才使用HTTPS，如登录 反推TOKEN的特性 加密，不可被窃听 加密方式 秘钥 对于API，一般不要求登录，所以用户名和密钥要提前约定好. 签名，可以证明请求没有没篡改 有效期设置功能，防止被窃取后伪造请求；如果是浏览器访问也可以解决CSRF “per session cookies, and per request tokens.”， 可以解决CSRF，但不能解决监听问题。 API不存在CSRF问题，但如果token永不过期，截取到token便可以伪造请求了，所以可以为API的token设置一个长点的过期时间 所以建议： API 非敏感数据的API过期设的长一些，以免让client频繁请求token 敏感数据直接升级用HTTPS B/S HTTPS + per request token 案例 去哪儿，HTTP+TOKEN 和 HTTPS 非敏感数据采用 HTTP + TOKEN 1String sign = DigestUtils.md5Hex(DigestUtils.md5Hex(secretKey + appKey) + salt); appKey、secretKey提前约定好 没有有效期，截取sign后可以长期伪装client, 发送重复请求。 没有签名， 伪装client，且可以更改请求 亮哥，HTTP + TOKEN 1String sign = md5(userId + timestamps + secret);//per request timestamps server端记录每次请求的timestamps, 当次有效 没有签名， 可以被劫持，从而更改请求 伪装问题 HTTPS不存在伪装问题 有证书保证server身份，所以无法伪装server 在用户名密码不被泄露的情况下，能建立起SSL的就是真正的用户 HTTP虽然无法彻底解决伪装问题，但是因为token的不可更改不可窃听的属性，伪装被降级成转发监听 由于token是不可读，不可修改的，所以第三方无法伪造只能引用. 又因为加了有效期，所以第三方最多只能转发监听 Client-side/Stateless Sessions (客户端持有的/无状态session) stateless 只保存客户数据 JWT不可被第三方 读取 和 更改 签名 = 不可更改 加密 = 不可读 Cross-Site Request Forgery (CSRF - 跨站请求伪造) 由于同一浏览器进程下 Cookie 可见性，导致用户身份被盗用，完成恶意网站脚本中指定的操作 解决方案 “per session cookies, and per request tokens.” 案例一 客户端每个request都必须携带 userId + timestamps + token token = md5(userId + secret + timestamps**)，确保信息不被更改 timestamps只能使用一次 服务端先校验timestamps是否已经被处理，如果已经处理，拒绝请求 服务端根据收到的userId + timestamps和约定好的secret计算token，然后和收到的token进行比较校验]]></content>
@@ -67,17 +78,6 @@
       <tags>
         <tag>HTTPS</tag>
         <tag>JWT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Redis实战（Redis IN ACTION）]]></title>
-    <url>%2FredisInAction.html</url>
-    <content type="text"><![CDATA[第1章 初识Redis Redis的优点 比关系型数据库更效率、更易用；比内存数据库有数据结构上的优势 高性能内存数据库，但支持持久化《RDB, AOF》 5种数据结构 《string, List, set, hash, zset 第6种数据结构：pub/sub 简单事务 过期机制 主从复制 -&gt; 扩展读性能，故障转移 第4章 数据安全与性能保障 4.1 持久化选项 快照持久化&lt;SNAPSHOT/RDB、AOF&gt; 从服务器的复制启动过程&lt;第一次同步&gt; SNAPSHOT/RDB &lt;高效恢复数据，但是有停顿，丢数据&gt; BGSAVE fork子进程 -&gt; 停顿 &lt;生成子进程的过程会阻塞父进程&gt; 可关闭自动保存，手动触发 内存不足时 -&gt; 使用虚拟内存 master内存使用率应在50%~65% SAVE 没有子进程，故比BGSAVE快 数据完整性 可承受丢失多长时间的数据？ save 60 1000 丢失了那些数据？ -&gt; process_logs() 保证日志的处理结果和处理进度总是同时被记录到快照文件里面 AOF 不丢数据，无停顿，但恢复慢，日志体积大 主从写更新 同步频率&lt;appendfsync选项&gt; always&lt;每次写都触发同步，每次只写入一个命令&gt; -&gt; 最慢 everysec&lt;每秒触发一次同步&gt; -&gt; 推荐 no&lt;操作系统自动决定同步时机&gt; -&gt; 不推荐 重写/压缩AOF文件 BGREWRITEAOF -&gt; 工作机制同BGSAVE，停顿 何时执行BGREWRITEAOF？ auto-aof-rewrite-percentage auto-aof-rewirte-min-size 4.2 复制(replication) 主从复制 &lt;不支持多主复制&gt; 复制的启动过程 主从链 复制中间层 -&gt; 分担主服务器的复制工作 检查硬盘写入 conn.info()…. 4.3 处理系统故障 验证AOF文件 可修复 验证快照文件 不可修复 恢复前需验证快照文件&lt;SHA1/SHA256&gt; 更换故障主服务器、Redis Sentinel的故障转移 4.4 事务 watch + retry 如果数据被更改，收到watch的通知，然后重试 流水线（pipelining）方式：pipe.multi + pipe.execute 一次性发送多个命令，然后等待所有回复出现&lt;如果执行过程中，接到watchError则失败&gt; 4.5 非事务型流水线 pipe = conn.pipeline(false) 《单纯的把多个命令打包，一起发送》]]></content>
-      <categories>
-        <category>readNote</category>
-      </categories>
-      <tags>
-        <tag>Redis</tag>
       </tags>
   </entry>
   <entry>
