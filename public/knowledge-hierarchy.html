@@ -143,7 +143,7 @@
 <meta property="og:site_name" content="极速漫步">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://www.bbetterman.com/images/知识体系总览.pdf">
-<meta property="og:updated_time" content="2018-04-06T06:17:54.000Z">
+<meta property="og:updated_time" content="2018-04-07T03:54:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="知识体系总览">
 <meta name="twitter:image" content="http://www.bbetterman.com/images/知识体系总览.pdf">
@@ -431,6 +431,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/knowledge-hierarchy.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/knowledge-hierarchy.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -531,6 +541,13 @@
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
 
   
 
@@ -861,6 +878,43 @@
 
 
 
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname,
+            owner: 'jisumanbu',
+            repo: 'gitment',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '5e48d4f27d0657c5f9e0782ae35badaaa552ec1d',
+            
+                client_id: '41154d5f699feb5557cf'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
 
 
 

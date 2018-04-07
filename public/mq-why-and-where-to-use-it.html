@@ -145,7 +145,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://www.bbetterman.com/images/消息总线.jpg">
 <meta property="og:image" content="http://www.bbetterman.com/images/日志收集架构图.png">
-<meta property="og:updated_time" content="2018-04-01T08:30:28.000Z">
+<meta property="og:updated_time" content="2018-04-07T03:54:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为什么需要消息中间件 以及 消息中间件的使用场景">
 <meta name="twitter:description" content="生产者消费者模式的思考 如何多机器部署运行  &amp;lt;分布式&amp;gt;？ 挑战：queue无法跨JVM共享   如何灾备以及负载均衡？  挑战：需要一个controller做通知和分发数据   所以，需要一个独立部署的可以被多方访问的服务，其数据必须是多线程乃至分布式安全的  消息中间件是个好的选择   消息中间件的特征 queues （消息的容器） 发布/订阅（Publisher/Subscrib">
@@ -434,6 +434,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/mq-why-and-where-to-use-it.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/mq-why-and-where-to-use-it.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -617,6 +627,13 @@
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
 
   
 
@@ -972,6 +989,43 @@
 
 
 
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname,
+            owner: 'jisumanbu',
+            repo: 'gitment',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '5e48d4f27d0657c5f9e0782ae35badaaa552ec1d',
+            
+                client_id: '41154d5f699feb5557cf'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
 
 
 
