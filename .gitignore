@@ -4,3 +4,4 @@ themes/next/_config.yml
 nohup.out
 *.iml
 db.json
+public
