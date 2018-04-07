@@ -613,8 +613,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/redisInAction.html" rel="prev" title="Redis实战（Redis IN ACTION）">
-                Redis实战（Redis IN ACTION） <i class="fa fa-chevron-right"></i>
+              <a href="/HTTP_HTTPS_Token.html" rel="prev" title="HTTP、HTTPS、TOKEN的比较 以及 如何选择">
+                HTTP、HTTPS、TOKEN的比较 以及 如何选择 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1018,7 +1018,7 @@
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitmint({
-            id: window.location.pathname,
+            id: decodeURI(window.location.pathname),
             owner: 'jisumanbu',
             repo: 'gitment',
             
