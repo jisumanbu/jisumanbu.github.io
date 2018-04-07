@@ -6,6 +6,6 @@ hexo d
 git add .
 #DATE=`date +%Y-%m-%d.%T`
 git commit -m "rebuild after remove _config.yml from repository"
-git push luodifz@www.bbetterman.com:/data/gitLibrary/jisumanbu.git hexo
+git pull https://github.com/jisumanbu/jisumanbu.github.io.git hexo
 
 
