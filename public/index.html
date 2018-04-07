@@ -467,8 +467,8 @@
 
       
         
-          <p>《奇特的一生》以个人传记的方式讲述了柳比歇夫的时间管理法。按照作者的逻辑去读这本书的话，很难抓住重点，<br>正如作者自己所言”作者仍然不能做出最后的结论，给读者出点什么主意”。<br>比如，全书的中心是”怎样才能生活的更好”，但是全文又都是在写柳比歇夫的”时间统计法”，他们之间的逻辑是什么样的？<br>我们有必要或如何将时间统计法应用到我们的生活中？</p>
-<p>“时间统计法”本质上是时间管理的一种方式和工具，它服务于目标管理，帮助我们更好的完成我们的人生目标。<br>下面本文就将以”目标驱动”的逻辑来重新梳理《奇特的一生》，弄明白”怎样才能生活的更好”。<br>
+          <p>《奇特的一生》以个人传记的方式讲述了柳比歇夫的时间管理法。按照作者的逻辑去读这本书的话，很难抓住重点，<br>正如作者自己所言”作者仍然不能做出最后的结论，给读者出点什么主意”。<br>比如，全书的中心是”怎样才能生活的更好”，但是全文又都是在写柳比歇夫的”时间统计法”，他们之间的逻辑是什么样的？</p>
+<p>“时间统计法”本质上是时间管理的一种方式和工具，它服务于目标管理，帮助我们更好的完成我们的人生目标。<br>下面本文就将以倒退的逻辑来重新梳理《奇特的一生》，弄明白”怎样才能生活的更好”。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/怎样才能生活得更好-奇特的一生读书笔记.html#more" rel="contents">
@@ -1036,182 +1036,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.bbetterman.com/how-does-a-hashmap-work-in-java.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="jisumanbu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/422.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="极速漫步">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/how-does-a-hashmap-work-in-java.html" itemprop="url">HashMap的工作原理【译文】</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-15T00:00:00+08:00">2018-03-15</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DataStructure/" itemprop="url" rel="index"><span itemprop="name">DataStructure</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/how-does-a-hashmap-work-in-java.html" class="leancloud_visitors" data-flag-title="HashMap的工作原理【译文】">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>翻译自<a href="http://coding-geek.com/how-does-a-hashmap-work-in-java/" target="_blank" rel="noopener">How does a HashMap work in JAVA - Coding Geek</a>.<br>欢迎指正错误。</p>
-</blockquote>
-<p>绝大多数JAVA开发者无时无刻不在使用Maps，特别是HashMaps。HashMap提供了即简单又强大的存储和获取数据的方式。但是又有多少人了解Hashmap的内部运行机制呢？<br>最近一段时间，为了深入了解HashMap这一重要的数据结构我阅读了绝大部分java.util.HashMap的源码， 先是基于java 7然后java 8。<br>在这篇博文里，我将为大家展示HashMap的实现原理，在java 8中的新特性在使用中要注意的关于性能和内存的问题，以及一些常见问题。</p>
-<h6 id="Contents"><a href="#Contents" class="headerlink" title="Contents"></a>Contents</h6><blockquote>
-<ol>
-<li>内部存储</li>
-<li>自适应大小</li>
-<li>线程安全</li>
-<li>Key的不可变性</li>
-<li>JAVA 8中的提升</li>
-<li>内存负载<ol>
-<li>JAVA 7</li>
-<li>JAVA 8<br>7 性能问题</li>
-<li>Skewed HashMap vs well balanced HashMap</li>
-<li>自适应大小带来的开销<br>8 总结</li>
-</ol>
-</li>
-</ol>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/how-does-a-hashmap-work-in-java.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.bbetterman.com/HTTP_HTTPS_Token.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1341,6 +1165,182 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/HTTP_HTTPS_Token.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.bbetterman.com/how-does-a-hashmap-work-in-java.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="jisumanbu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/422.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="极速漫步">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/how-does-a-hashmap-work-in-java.html" itemprop="url">HashMap的工作原理【译文】</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-15T00:00:00+08:00">2018-03-15</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DataStructure/" itemprop="url" rel="index"><span itemprop="name">DataStructure</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/how-does-a-hashmap-work-in-java.html" class="leancloud_visitors" data-flag-title="HashMap的工作原理【译文】">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>翻译自<a href="http://coding-geek.com/how-does-a-hashmap-work-in-java/" target="_blank" rel="noopener">How does a HashMap work in JAVA - Coding Geek</a>.<br>欢迎指正错误。</p>
+</blockquote>
+<p>绝大多数JAVA开发者无时无刻不在使用Maps，特别是HashMaps。HashMap提供了即简单又强大的存储和获取数据的方式。但是又有多少人了解Hashmap的内部运行机制呢？<br>最近一段时间，为了深入了解HashMap这一重要的数据结构我阅读了绝大部分java.util.HashMap的源码， 先是基于java 7然后java 8。<br>在这篇博文里，我将为大家展示HashMap的实现原理，在java 8中的新特性在使用中要注意的关于性能和内存的问题，以及一些常见问题。</p>
+<h6 id="Contents"><a href="#Contents" class="headerlink" title="Contents"></a>Contents</h6><blockquote>
+<ol>
+<li>内部存储</li>
+<li>自适应大小</li>
+<li>线程安全</li>
+<li>Key的不可变性</li>
+<li>JAVA 8中的提升</li>
+<li>内存负载<ol>
+<li>JAVA 7</li>
+<li>JAVA 8<br>7 性能问题</li>
+<li>Skewed HashMap vs well balanced HashMap</li>
+<li>自适应大小带来的开销<br>8 总结</li>
+</ol>
+</li>
+</ol>
+</blockquote>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/how-does-a-hashmap-work-in-java.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
