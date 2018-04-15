@@ -5,6 +5,7 @@ categories:
 - readNote
 tags:
 - Redis
+- 存储
 ---
 #### 第1章 初识Redis
 * Redis的优点
