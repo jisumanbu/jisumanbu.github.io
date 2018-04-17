@@ -7,7 +7,6 @@ tags:
 - 存储
 ---
 #### 目标数据
-![Microservices_Designing_Deploying](/images/Microservices_Designing_Deploying.pdf)
   * 数据量
     > * 20万条数据，总大小5G
     > * 部分数据会达到1.5M~2M/条
