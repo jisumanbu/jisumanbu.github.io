@@ -5,7 +5,7 @@ hexo d
 
 git add .
 #DATE=`date +%Y-%m-%d.%T`
-git commit -m "remove Microservices_Designing_Deploying.pdf"
+git commit -m "reset"
 git push https://github.com/jisumanbu/jisumanbu.github.io.git hexo
 
 
