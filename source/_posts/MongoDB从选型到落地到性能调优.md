@@ -22,14 +22,14 @@ tags:
 #### 问题描述与分析
   * 现状
     > * 数据存储在Redis中
-    > * 序列化采用[fast-serialization](https://github.com/RuedigerMoeller/fast-serialization)   
+    > * 序列化采用[fast-serialization](https://github.com/RuedigerMoeller/fast-serialization)
      FST虽然比JDK原生序列化快很多，但是运维成本很高：只要实体类稍微有变更，哪怕添加字段、空的构造函数都会造成反序列化出错。
   * 问题
     > * 有时出现"Redis server response timeout"
     > * 查询缓慢
     > * Redis占用内存偏大
   * 分析与结论
-    > * 大文件不适合用Redis存储   
+    > * 大文件不适合用Redis存储
      Redis的存储结构与单线程设计决定了它对于大文件的性能会很好。
      [Redis当value大小超过10k]()
     > * 这些数据更适合用document的NoSQL
